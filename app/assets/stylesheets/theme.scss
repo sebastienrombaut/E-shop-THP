@@ -6594,4 +6594,33 @@ body.lb-disable-scrolling {
  background-size: cover;
  overflow: hidden;
 }
+
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin: 5px;
+
+}
+
+#items {
+  width: 250px;
+  height: 350px;
+  margin: 10px;
+
+
+}
+
+#poster {
+  padding: 30px;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  display: flex;
+  margin: 30px;
+  flex-direction: column;
+}
 /*# sourceMappingURL=theme.css.map */
+
+
+
