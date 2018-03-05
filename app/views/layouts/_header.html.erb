@@ -5,7 +5,7 @@
 						<div class="container-fluid">
 							<div class="navbar-header">
 							<a href="#" class="header-logo-small">
-								<%= image_tag("logo.png", :alt=>"store logo")%>
+								<%= image_tag("logo.jpeg", :alt=>"store logo")%>
 							</a>
 								<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
 									<span class="sr-only">Toggle navigation</span>
@@ -78,9 +78,12 @@
 								</ul>
 								<div class="header-languages pull-right mr-30">
 								<ul>
-									<li><span>EN</span></li>
-									<li><a href="#">DE</a></li>
-									<li><a href="#">FR</a></li>
+									<% if user_signed_in? %>
+										<li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+									<% else %>
+       							    	<li><%= link_to "Log in", new_user_session_path %></li>
+       							    	<li><%= link_to "Sign up", new_user_registration_path %></li>
+      							    <% end %>
 								</ul>
 								</div>
 								<div class="header-search-container pull-right">
