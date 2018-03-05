@@ -1,2 +1,901 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<header class="header header-fixed nav-down">
+			<div class="box mb-0">
+				<div class="">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<div class="navbar-header">
+							<a href="#" class="header-logo-small">
+								<%= image_tag("logo.png", :alt=>"store logo")%>
+							</a>
+								<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+
+							<div class="collapse navbar-collapse js-navbar-collapse">
+								<ul class="nav navbar-nav">
+									<li class="header-link"><a href="#">Home</a></li>
+									<li class="header-link"><a href="#">Specials</a></li>
+									<li class="header-link dropdown mega pull-left ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <span class="ti-angle-down"></span></a>
+
+										<ul class="dropdown-menu mega-menu row">
+											<li class="col-sm-3">
+												<ul>
+													<li><%= image_tag("categories/05.jpg", :class =>"img-responsive  width-100 mb-15",  :alt =>"category image")%>
+													<%= image_tag("categories/06.jpg", :class=>"img-responsive width-100", :alt=>"category image")%></li>
+												</ul>
+											</li>
+
+											<li class="col-sm-3 col-xs-6 smartphone-fw">
+												<ul>
+													<li class="dropdown-header">Excepteur s cupidatat </li>
+													<li><a href="#">lorem ipsum dolor </a></li>
+													<li><a href="#">laboris nisi ut aliquip</a></li>
+													<li><a href="#">int occaecat</a></li>
+													<li><a href="#">Newsletter Form</a></li>
+													<li><a href="#">fugiat nulla pariatur</a></li>
+													<li class="divider"></li>
+													<li class="dropdown-header">Reprehenderit </li>
+													<li><a href="#">ullamco  ex ea commodo</a></li>
+													<li><a href="#">incididunt ut labore </a></li>
+													<li><a href="#">fugiat nulla pariatur</a></li>
+												</ul>
+											</li>
+
+											<li class="col-sm-3 col-xs-6 smartphone-fw">
+												<ul>
+													<li class="dropdown-header">Culpa qui officia deserunt</li>
+													<li><a href="#">laboris nisi ut aliquip</a></li>
+													<li><a href="#">int occaecat</a></li>
+													<li><a href="#">nostrud exercitation </a></li>
+													<li><a href="#">fugiat nulla pariatur</a></li>
+													<li class="divider"></li>
+
+													<li class="dropdown-header">Consectetur adipisicing </li>
+													<li><a href="#">enim ad minim veniam</a></li>
+													<li><a href="#">dolore magna aliqua</a></li>
+													<li><a href="#"> aute irure dolor</a></li>
+												</ul>
+											</li>
+
+											<li class="col-sm-3 col-xs-6 smartphone-fw">
+												<ul>
+													<li class="dropdown-header">Aute irure dolor</li>
+													<li><a href="#">mollit anim id est</a></li>
+													<li><a href="#">enim ad minim veniam</a></li>
+													<li><a href="#">dolore magna aliqua</a></li>
+													<li class="divider"></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="header-link"><a href="#">New products</a></li>
+									
+								</ul>
+								<div class="header-languages pull-right mr-30">
+								<ul>
+									<li><span>EN</span></li>
+									<li><a href="#">DE</a></li>
+									<li><a href="#">FR</a></li>
+								</ul>
+								</div>
+								<div class="header-search-container pull-right">
+									<form class="navbar-form pull-right">
+										<fieldset>
+											<div class="form-group">
+												<input class="form-control" placeholder="Search" type="text">
+											</div>
+											<button type="submit" class="btn btn-link"><span class="ti-search"></span></button>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<section class="home">
+			<div class="home-slider home-slider-full-page">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide home-slider-centered" style="background-image:url('/assets/slider/cat1.jpg')">
+						<h1 class="light wow fadeInDown"><span class="theme-color">#</span>DES PHOTOS DE PETITS CHATS TROP MIMI</h1>
+						<a class="btn btn-primary wow fadeInUp">Go ! <span class="ti-arrow-right light"></span></a>
+					</div>
+					<div class="swiper-slide home-slider-centered" style="background-image:url('/assets/slider/cat2.jpg')">
+						<h1 class="light wow fadeInDown"><span class="theme-color">#</span>DES PHOTOS DE PETITS CHATS TROP MIMI</h1>
+						<a class="btn btn-primary wow fadeInUp">Go ! <span class="ti-arrow-right light"></span></a>
+					</div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="home-slider-pagination"></div>
+				<span class="ti-angle-left home-slider-prev"></span>
+				<span class="ti-angle-right home-slider-next"></span>
+			</div>
+		</section>
+
+		<div class="container">
+			<div class="row">
+   				<!-- TAB PANEL ROW -->
+   				<div class="col-md-12 box mt-60">
+					<ul class="nav nav-tabs nav-center mb-30" role="tablist">
+						<li class="active wow fadeInRight" data-wow-delay="0.6s"><a href="#featured" data-toggle="tab">featured</a></li>
+						<li class=" wow fadeInRight" data-wow-delay="0.4s"><a href="#best" data-toggle="tab">bestsellers</a></li>
+						<li class=" wow fadeInRight" data-wow-delay="0.2s" ><a href="#new" data-toggle="tab">new</a></li>
+					</ul>
+
+					<div class="tab-content">
+	              		<div role="tabpanel" class="tab-pane fade in active row" id="featured">
+       					<!-- SINGLE PRODUCT BOX -->
+	    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
+			    			<div class="product-box  product-box-vertical">
+				    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
+				    				<div class="product-box-image">
+				    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
+				    					<span class="product-box-hover-content zoom">
+				    						<span class="product-box-hover-content-container">
+				   								<span class="product-box-hover-content-icons">
+					    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
+					    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
+					    							<a href="#" title="share"><span class="ti-share"></span></a>
+				    							</span>
+				    							<span>S | M | L | XL | XXL</span>
+				    						</span>
+				    					</span>
+				    				</div>
+
+				    				<div class="product-box-details">
+					    				<span class="product-box-new">new!</span>
+										<h5>Laurent handbag</h5>
+							            <div class="product-box-rating">
+				                            <ul>
+				                                <li><span class="glyphicon glyphicon-star"></span></li>
+				                                <li><span class="glyphicon glyphicon-star"></span></li>
+				                                <li><span class="glyphicon glyphicon-star"></span></li>
+				                                <li><span class="glyphicon glyphicon-star"></span></li>
+				                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+				                            </ul>
+				                        </div>
+
+										<span class="product-box-old-price">$ 122.33</span>
+										<span class="product-box-price h5">$ 22.33</span>
+										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+											add to cart
+										</a> 
+									</div>
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<!-- / SINGLE PRODUCT BOX -->
+       					<!-- SINGLE PRODUCT BOX -->
+	    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
+			    			<div class="product-box  product-box-vertical">
+				    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
+				    				<div class="product-box-image">
+				    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
+				    					<span class="product-box-hover-content zoom">
+				    						<span class="product-box-hover-content-container">
+				   								<span class="product-box-hover-content-icons">
+					    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
+					    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
+					    							<a href="#" title="share"><span class="ti-share"></span></a>
+				    							</span>
+				    							<span>S | M | L | XL | XXL</span>
+				    						</span>
+				    					</span>
+				    				</div>
+
+				    				<div class="product-box-details">
+					    				<span class="product-box-new">new!</span>
+										<h5>Laurent handbag</h5>
+							            <div class="product-box-rating">
+				                            <ul>
+				                                <li><span class="glyphicon glyphicon-star"></span></li>
+				                                <li><span class="glyphicon glyphicon-star"></span></li>
+				                                <li><span class="glyphicon glyphicon-star"></span></li>
+				                                <li><span class="glyphicon glyphicon-star"></span></li>
+				                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+				                            </ul>
+				                        </div>
+
+										<span class="product-box-old-price">$ 122.33</span>
+										<span class="product-box-price h5">$ 22.33</span>
+										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+											add to cart
+										</a> 
+									</div>
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<!-- / SINGLE PRODUCT BOX -->
+       					<!-- SINGLE PRODUCT BOX -->
+	    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
+			    			<div class="product-box  product-box-vertical">
+				    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
+				    				<div class="product-box-image">
+				    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
+				    					<span class="product-box-hover-content zoom">
+				    						<span class="product-box-hover-content-container">
+				   								<span class="product-box-hover-content-icons">
+					    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
+					    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
+					    							<a href="#" title="share"><span class="ti-share"></span></a>
+				    							</span>
+				    							<span>S | M | L | XL | XXL</span>
+				    						</span>
+				    					</span>
+				    				</div>
+
+				    				<div class="product-box-details">
+					    				<span class="product-box-new">new!</span>
+										<h5>Laurent handbag</h5>
+							            <div class="product-box-rating">
+				                            <ul>
+				                                <li><span class="glyphicon glyphicon-star"></span></li>
+				                                <li><span class="glyphicon glyphicon-star"></span></li>
+				                                <li><span class="glyphicon glyphicon-star"></span></li>
+				                                <li><span class="glyphicon glyphicon-star"></span></li>
+				                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+				                            </ul>
+				                        </div>
+
+										<span class="product-box-old-price">$ 122.33</span>
+										<span class="product-box-price h5">$ 22.33</span>
+										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+											add to cart
+										</a> 
+									</div>
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<!-- / SINGLE PRODUCT BOX -->
+	              		</div>
+
+	              		<div role="tabpanel" class="tab-pane fade in row" id="best">
+		              		<!-- SINGLE PRODUCT BOX -->
+		    				<div class="smartphone-fw col-md-4">
+				    			<div class="product-box product-box-vertical pb-30 ">
+					    			<div class="product-box-wrapper product-box-wrapper-bg no-padding">
+					    				<div class="product-box-image">
+					    					<a href="#">
+						    					<%= image_tag("products/product-02.jpg", :class=>"img-responsive product-box-image-primary", :alt=>"product image")%>
+
+						    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive product-box-image-secondary", :alt=>"product image")%>
+					    					</a>
+					    				</div>
+
+					    				<div class="product-box-details">
+						    				<span class="product-box-new">new!</span>
+											<h5>Laurent handbag</h5>
+								            <div class="product-box-rating">
+					                            <ul>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+					                            </ul>
+					                        </div>
+
+											<span class="product-box-old-price">$ 122.33</span>
+											<span class="product-box-price h5">$ 22.33</span>
+											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+												add to cart
+											</a>  
+										</div>
+				    				</div>
+				    			</div>
+				    		</div>
+				    		<!-- / SINGLE PRODUCT BOX-->
+		              		<!-- SINGLE PRODUCT BOX -->
+		    				<div class="smartphone-fw col-md-4">
+				    			<div class="product-box product-box-vertical pb-30 ">
+					    			<div class="product-box-wrapper product-box-wrapper-bg no-padding">
+					    				<div class="product-box-image">
+					    					<a href="#">
+						    					<%= image_tag("products/product-02.jpg", :class=>"img-responsive product-box-image-primary", :alt=>"product image")%>
+
+						    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive product-box-image-secondary", :alt=>"product image")%>
+					    					</a>
+					    				</div>
+
+					    				<div class="product-box-details">
+						    				<span class="product-box-new">new!</span>
+											<h5>Laurent handbag</h5>
+								            <div class="product-box-rating">
+					                            <ul>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+					                            </ul>
+					                        </div>
+
+											<span class="product-box-old-price">$ 122.33</span>
+											<span class="product-box-price h5">$ 22.33</span>
+											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+												add to cart
+											</a>  
+										</div>
+				    				</div>
+				    			</div>
+				    		</div>
+				    		<!-- / SINGLE PRODUCT BOX-->
+		              		<!-- SINGLE PRODUCT BOX -->
+		    				<div class="smartphone-fw col-md-4">
+				    			<div class="product-box product-box-vertical pb-30 ">
+					    			<div class="product-box-wrapper product-box-wrapper-bg no-padding">
+					    				<div class="product-box-image">
+					    					<a href="#">
+
+						    					<%= image_tag("products/product-02.jpg", :class=>"img-responsive product-box-image-primary", :alt=>"product image")%>
+
+						    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive product-box-image-secondary", :alt=>"product image")%>
+					    					</a>
+					    				</div>
+
+					    				<div class="product-box-details">
+						    				<span class="product-box-new">new!</span>
+											<h5>Laurent handbag</h5>
+								            <div class="product-box-rating">
+					                            <ul>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+					                            </ul>
+					                        </div>
+
+											<span class="product-box-old-price">$ 122.33</span>
+											<span class="product-box-price h5">$ 22.33</span>
+											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+												add to cart
+											</a>  
+										</div>
+				    				</div>
+				    			</div>
+				    		</div>
+				    		<!-- / SINGLE PRODUCT BOX-->
+	              		</div>
+
+	              		<div role="tabpanel" class="tab-pane fade in row" id="new">
+	      					<!-- SINGLE PRODUCT BOX -->
+		    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
+				    			<div class="product-box  product-box-vertical">
+					    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
+					    				<div class="product-box-image">
+
+					    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
+					    				
+					    					<span class="product-box-hover-content zoom">
+					    						<span class="product-box-hover-content-container">
+					   								<span class="product-box-hover-content-icons">
+						    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
+						    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
+						    							<a href="#" title="share"><span class="ti-share"></span></a>
+					    							</span>
+					    							<span>S | M | L | XL | XXL</span>
+					    						</span>
+					    					</span>
+					    				</div>
+
+					    				<div class="product-box-details">
+						    				<span class="product-box-new">new!</span>
+											<h5>Laurent handbag</h5>
+								            <div class="product-box-rating">
+					                            <ul>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+					                            </ul>
+					                        </div>
+
+											<span class="product-box-old-price">$ 122.33</span>
+											<span class="product-box-price h5">$ 22.33</span>
+											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+												add to cart
+											</a> 
+										</div>
+				    				</div>
+				    			</div>
+				    		</div>
+				    		<!-- / SINGLE PRODUCT BOX -->
+	       					<!-- SINGLE PRODUCT BOX -->
+		    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
+				    			<div class="product-box  product-box-vertical">
+					    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
+					    				<div class="product-box-image">
+					    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
+					    					<span class="product-box-hover-content zoom">
+					    						<span class="product-box-hover-content-container">
+					   								<span class="product-box-hover-content-icons">
+						    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
+						    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
+						    							<a href="#" title="share"><span class="ti-share"></span></a>
+					    							</span>
+					    							<span>S | M | L | XL | XXL</span>
+					    						</span>
+					    					</span>
+					    				</div>
+
+					    				<div class="product-box-details">
+						    				<span class="product-box-new">new!</span>
+											<h5>Laurent handbag</h5>
+								            <div class="product-box-rating">
+					                            <ul>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+					                            </ul>
+					                        </div>
+
+											<span class="product-box-old-price">$ 122.33</span>
+											<span class="product-box-price h5">$ 22.33</span>
+											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+												add to cart
+											</a> 
+										</div>
+				    				</div>
+				    			</div>
+				    		</div>
+				    		<!-- / SINGLE PRODUCT BOX -->
+	       					<!-- SINGLE PRODUCT BOX -->
+		    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
+				    			<div class="product-box  product-box-vertical">
+					    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
+					    				<div class="product-box-image">
+					    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
+					    					<span class="product-box-hover-content zoom">
+					    						<span class="product-box-hover-content-container">
+					   								<span class="product-box-hover-content-icons">
+						    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
+						    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
+						    							<a href="#" title="share"><span class="ti-share"></span></a>
+					    							</span>
+					    							<span>S | M | L | XL | XXL</span>
+					    						</span>
+					    					</span>
+					    				</div>
+
+					    				<div class="product-box-details">
+						    				<span class="product-box-new">new!</span>
+											<h5>Laurent handbag</h5>
+								            <div class="product-box-rating">
+					                            <ul>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+					                            </ul>
+					                        </div>
+
+											<span class="product-box-old-price">$ 122.33</span>
+											<span class="product-box-price h5">$ 22.33</span>
+											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+												add to cart
+											</a> 
+										</div>
+				    				</div>
+				    			</div>
+				    		</div>
+				    		<!-- / SINGLE PRODUCT BOX -->
+	              		</div>
+	              	</div>
+				</div>
+   				<!-- / TAB PANEL ROW-->
+
+   				<!-- PRODUCT CAROUSEL -->
+ 				<!-- PRDODUCT CAROUSEL -->
+				<div class="col-md-12 box">
+					<h5 class="heading mr-0 mb-30"><span>//</span> PRODUCT CAROUSEL
+					<span class="carousel-controls pull-right">
+						<span class="ti-angle-left swiper-button-prev2"></span>
+						<span class="ti-angle-right swiper-button-next2"></span>
+					</span>
+				</h5>
+					<div class="swiper-container">
+				        <div class="swiper-wrapper">
+				        <!-- SINGLE SLIDE -->
+				            <div class="swiper-slide">
+				           	<!-- SINGLE PRODUCT BOX -->
+				    			<div class="product-box product-box-vertical pb-30 ">
+					    			<div class="product-box-wrapper product-box-wrapper-bg no-padding">
+					    				
+					    				
+					    				<div class="product-box-image">
+					    					<a href="#">
+						    					
+						    						<%= image_tag("products/product-01.jpg", :class=>"img-responsive product-box-image-primary", :alt=>"product image")%>
+
+						    					<%= image_tag("products/product-02.jpg", :class=>"img-responsive product-box-image-secondary", :alt=>"product image")%>
+					    					</a>
+					    				</div>
+
+					    				<div class="product-box-details">
+						    				<span class="product-box-new">new!</span>
+											<h5>Laurent handbag</h5>
+								            <div class="product-box-rating">
+					                            <ul>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+					                            </ul>
+					                        </div>
+
+											<span class="product-box-old-price">$ 122.33</span>
+											<span class="product-box-price h5">$ 22.33</span>
+											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+												add to cart
+											</a>  
+										</div>
+				    				</div>
+				    			</div>
+	    					<!-- / SINGLE PRODUCT BOX-->
+				            </div>
+				        <!-- SINGLE SLIDE -->
+
+				        <!-- SINGLE SLIDE -->
+				            <div class="swiper-slide">
+				           	<!-- SINGLE PRODUCT BOX -->
+				    			<div class="product-box product-box-vertical pb-30 ">
+					    			<div class="product-box-wrapper product-box-wrapper-bg no-padding">
+					    				
+					    				
+					    				<div class="product-box-image">
+					    					<a href="#">
+						    						<%= image_tag("products/product-01.jpg", :class=>"img-responsive product-box-image-primary", :alt=>"product image")%>
+
+						    					<%= image_tag("products/product-02.jpg", :class=>"img-responsive product-box-image-secondary", :alt=>"product image")%>
+					    					</a>
+					    				</div>
+
+					    				<div class="product-box-details">
+						    				<span class="product-box-new">new!</span>
+											<h5>Laurent handbag</h5>
+								            <div class="product-box-rating">
+					                            <ul>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+					                            </ul>
+					                        </div>
+
+											<span class="product-box-old-price">$ 122.33</span>
+											<span class="product-box-price h5">$ 22.33</span>
+											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+												add to cart
+											</a>  
+										</div>
+				    				</div>
+				    			</div>
+	    					<!-- / SINGLE PRODUCT BOX-->
+				            </div>
+				        <!-- SINGLE SLIDE -->
+
+				        <!-- SINGLE SLIDE -->
+				            <div class="swiper-slide">
+				           	<!-- SINGLE PRODUCT BOX -->
+				    			<div class="product-box product-box-vertical pb-30 ">
+					    			<div class="product-box-wrapper product-box-wrapper-bg no-padding">
+					    				
+					    				
+					    				<div class="product-box-image">
+					    					<a href="#">
+						    						<%= image_tag("products/product-01.jpg", :class=>"img-responsive product-box-image-primary", :alt=>"product image")%>
+
+						    					<%= image_tag("products/product-02.jpg", :class=>"img-responsive product-box-image-secondary", :alt=>"product image")%>
+					    					</a>
+					    				</div>
+
+					    				<div class="product-box-details">
+						    				<span class="product-box-new">new!</span>
+											<h5>Laurent handbag</h5>
+								            <div class="product-box-rating">
+					                            <ul>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+					                            </ul>
+					                        </div>
+
+											<span class="product-box-old-price">$ 122.33</span>
+											<span class="product-box-price h5">$ 22.33</span>
+											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+												add to cart
+											</a>  
+										</div>
+				    				</div>
+				    			</div>
+	    					<!-- / SINGLE PRODUCT BOX-->
+				            </div>
+				        <!-- SINGLE SLIDE -->
+
+				        <!-- SINGLE SLIDE -->
+				            <div class="swiper-slide">
+				           	<!-- SINGLE PRODUCT BOX -->
+				    			<div class="product-box product-box-vertical pb-30 ">
+					    			<div class="product-box-wrapper product-box-wrapper-bg no-padding">
+					    				
+					    				
+					    				<div class="product-box-image">
+					    					<a href="#">
+						    						<%= image_tag("products/product-01.jpg", :class=>"img-responsive product-box-image-primary", :alt=>"product image")%>
+
+						    					<%= image_tag("products/product-02.jpg", :class=>"img-responsive product-box-image-secondary", :alt=>"product image")%>
+					    					</a>
+					    				</div>
+
+					    				<div class="product-box-details">
+						    				<span class="product-box-new">new!</span>
+											<h5>Laurent handbag</h5>
+								            <div class="product-box-rating">
+					                            <ul>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+					                            </ul>
+					                        </div>
+
+											<span class="product-box-old-price">$ 122.33</span>
+											<span class="product-box-price h5">$ 22.33</span>
+											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+												add to cart
+											</a>  
+										</div>
+				    				</div>
+				    			</div>
+	    					<!-- / SINGLE PRODUCT BOX-->
+				            </div>
+				        <!-- SINGLE SLIDE -->
+
+				        <!-- SINGLE SLIDE -->
+				            <div class="swiper-slide">
+				           	<!-- SINGLE PRODUCT BOX -->
+				    			<div class="product-box product-box-vertical pb-30 ">
+					    			<div class="product-box-wrapper product-box-wrapper-bg no-padding">
+					    				
+					    				
+					    				<div class="product-box-image">
+					    					<a href="#">
+						    						<%= image_tag("products/product-01.jpg", :class=>"img-responsive product-box-image-primary", :alt=>"product image")%>
+
+						    					<%= image_tag("products/product-02.jpg", :class=>"img-responsive product-box-image-secondary", :alt=>"product image")%>
+					    					</a>
+					    				</div>
+
+					    				<div class="product-box-details">
+						    				<span class="product-box-new">new!</span>
+											<h5>Laurent handbag</h5>
+								            <div class="product-box-rating">
+					                            <ul>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+					                            </ul>
+					                        </div>
+
+											<span class="product-box-old-price">$ 122.33</span>
+											<span class="product-box-price h5">$ 22.33</span>
+											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+												add to cart
+											</a>  
+										</div>
+				    				</div>
+				    			</div>
+	    					<!-- / SINGLE PRODUCT BOX-->
+				            </div>
+				        <!-- SINGLE SLIDE -->
+
+				        <!-- SINGLE SLIDE -->
+				            <div class="swiper-slide">
+				           	<!-- SINGLE PRODUCT BOX -->
+				    			<div class="product-box product-box-vertical pb-30 ">
+					    			<div class="product-box-wrapper product-box-wrapper-bg no-padding">
+					    				
+					    				
+					    				<div class="product-box-image">
+					    					<a href="#">
+						    						<%= image_tag("products/product-01.jpg", :class=>"img-responsive product-box-image-primary", :alt=>"product image")%>
+
+						    					<%= image_tag("products/product-02.jpg", :class=>"img-responsive product-box-image-secondary", :alt=>"product image")%>
+					    					</a>
+					    				</div>
+
+					    				<div class="product-box-details">
+						    				<span class="product-box-new">new!</span>
+											<h5>Laurent handbag</h5>
+								            <div class="product-box-rating">
+					                            <ul>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star"></span></li>
+					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+					                            </ul>
+					                        </div>
+
+											<span class="product-box-old-price">$ 122.33</span>
+											<span class="product-box-price h5">$ 22.33</span>
+											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
+												add to cart
+											</a>  
+										</div>
+				    				</div>
+				    			</div>
+	    					<!-- / SINGLE PRODUCT BOX-->
+				            </div>
+				        <!-- SINGLE SLIDE -->
+				        </div>
+				        <!-- PAGINATION -->
+				        <div class="swiper-pagination"></div>
+					</div>
+					</div>
+				<!-- / PRDODUCT CAROUSEL ROW -->
+   				<!-- / PRODUCT CAROSUEL -->
+
+   				<!-- HOME BRANDS-->
+				<div class="col-md-12 box">
+					<h5 class="heading mt-0 mb-30 mr-0"><span>//</span> OUR BRANDS
+						<span class="carousel-controls pull-right">
+						<span class="ti-angle-left brands-slider-prev"></span>
+						<span class="ti-angle-right brands-slider-next"></span>
+					</span>
+					</h5>
+				</div>
+
+   				<div class="col-md-12">
+	                <div class="brands-slider">
+	                    <div class="swiper-wrapper">
+	                        <div class="swiper-slide shadow wow bounceIn" data-wow-delay=".1s">
+	                            <%= image_tag("brand.png", :alt=>"brand logo") %>
+	                        </div>
+
+	                        <div class="swiper-slide shadow wow bounceIn" data-wow-delay=".2s">
+	                            <%= image_tag("brand.png", :alt=>"brand logo") %>
+	                        </div>
+
+	                        <div class="swiper-slide shadow wow bounceIn" data-wow-delay=".3s">
+	                            <%= image_tag("brand.png", :alt=>"brand logo") %>
+	                        </div>
+
+	                        <div class="swiper-slide shadow wow bounceIn" data-wow-delay=".4s">
+	                            <%= image_tag("brand.png", :alt=>"brand logo") %>
+	                        </div>
+
+	                        <div class="swiper-slide shadow wow bounceIn" data-wow-delay=".5s">
+	                            <%= image_tag("brand.png", :alt=>"brand logo") %>
+	                        </div>
+
+	                        <div class="swiper-slide shadow wow bounceIn" data-wow-delay=".6s">
+	                            <%= image_tag("brand.png", :alt=>"brand logo") %>
+	                        </div>
+
+	                        <div class="swiper-slide shadow wow bounceIn" data-wow-delay=".7s">
+	                            <%= image_tag("brand.png", :alt=>"brand logo") %>
+	                        </div>
+
+	                        <div class="swiper-slide shadow wow bounceIn" data-wow-delay=".8s">
+	                            <%= image_tag("brand.png", :alt=>"brand logo") %>
+	                        </div>
+
+	                        <div class="swiper-slide shadow">
+	                            <%= image_tag("brand.png", :alt=>"brand logo") %>
+	                        </div>
+
+	                        <div class="swiper-slide shadow">
+	                            <%= image_tag("brand.png", :alt=>"brand logo") %>
+	                        </div>
+
+	                        <div class="swiper-slide shadow">
+	                            <%= image_tag("brand.png", :alt=>"brand logo") %>
+	                        </div>
+
+	                        <div class="swiper-slide shadow">
+	                            <%= image_tag("brand.png", :alt=>"brand logo") %>
+	                        </div>
+	                    </div>
+	                    <div class="brands-small-pagination text-center"></div>
+	                </div>
+   				</div>
+   				<!-- / HOME BRANDS -->
+			</div>
+		</div>
+
+	    <footer class="light-bg ">
+	        <div class="footer pt-60 pb-60" id="footer">
+	            <div class="container">
+	                <div class="row">
+	                     <div class="smartphone-fw col-sm-3">
+	                     <h6 class="heading mt-0"><span>//</span> CONTACT DATA</h6>
+	                            <address>
+	                                <strong>Laurent store</strong><br>
+	                                1355 Market Street, Suite 900<br>
+	                                San Francisco, CA 94103<br>
+	                                (123) 456-7890
+	                            </address>
+
+
+	                        </div>
+	                    <div class="smartphone-fw col-xs-6 col-sm-4 col-md-2">
+	                        <h6 class="heading mt-0"><span>//</span> INFORMATION</h6>
+	                        <ul>
+	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                        </ul>
+	                    </div>
+
+	                    <div class="smartphone-fw col-xs-6 col-sm-4 col-md-2">
+	                        <h6 class="heading mt-0"><span>//</span> TOP CATEGORIES</h6>
+	                        <ul>
+	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                        </ul>
+	                    </div>
+
+	                    <div class="smartphone-fw col-xs-6 col-sm-4 col-md-2">
+	                        <h6 class="heading mt-0"><span>//</span> ACCOUNT</h6>
+	                        <ul>
+	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                        </ul>
+	                    </div>
+	     
+	                    <div class="col-xs-12 col-sm-6 col-md-3">
+	                        <h6 class="heading mt-0"><span>//</span> STAY IN TOUCH</h6>
+
+	                        <form>
+	                            <fieldset>
+									<div class="form-group">
+										<div class="footer-newsletter">
+											<input class="form-control" id="firstName" placeholder="First name" type="text">
+											<button class="btn btn-link" type="button"><span class="ti-plus"></span></button>
+										</div>
+									</div>
+								</fieldset>
+	                        </form>
+
+	                        <ul class="footer-social" data-wow-delay="0.6s">
+	                            <li><a href="#" class="pull-left"><span class="ti-facebook"></span></a></li>
+	                            <li><a href="#" class="pull-left"><span class="ti-twitter"></span></a></li>
+	                            <li><a href="#" class="pull-left"><span class="ti-instagram"></span></a></li>
+	                            <li><a href="#" class="pull-left"><span class="ti-youtube"></span></a></li>
+	                        </ul>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        
+	        <div class="footer-bottom">
+	            <div class="container">
+	                <p class="pull-left"> Copyright © Laurent 2017. All right reserved. </p>
+	            </div>
+	        </div>
+	    </footer>

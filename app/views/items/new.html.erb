@@ -1,2 +1,68 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+
+		<section>
+			<div class="container">
+				<div class="row">
+	               	<div id="signup" class="login col-md-6 col-md-offset-3 col-sm-12">
+	                    <div class="panel panel-default shadow">
+	                        <div class="panel-heading">
+	                            <div class="panel-title h3">Ajouter un produit
+	                                
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <% render 'form' %>
+
+	                    <div class="panel-body">
+	                    	<%= form_for(@item, method: :post, :class => "form-horizontal") do |f| %>
+	                      
+	                            <div class="form-group">
+	                                <div class="col-md-12">
+	                                	<%= f.label :title %>
+	                                	 <%= f.text_field :title, :class => "form-control", :placeholder => "Le titre de l'article" %>
+	                                </div>
+	                            </div>
+	                            <div class="form-group">
+	                                <div class="col-md-12">
+	                                	<%= f.label :image_url %>
+	                                	 <%= f.url_field :image_url, :class => "form-control", :placeholder => "L'url de l'article" %>
+	                                </div>
+	                            </div>
+
+	                            <div class="form-group">
+	                                <div class="col-md-12">
+	                                	<%= f.label :description %>
+	                                	 <%= f.text_area :description, :class => "form-control", :placeholder => "La description de l'article" %>
+	                                </div>
+	                            </div>
+	                            <div class="form-group">
+	                                <div class="col-md-12">
+	                                	<%= f.label :price %>
+	                                	 <%= f.number_field :price, :class => "form-control", :placeholder => "La description de l'article" %>
+	                                </div>
+	                            </div>	                            
+
+	                            <div class="form-group">
+	                                <div class="col-md-12">
+	                                	<%= f.label :description %>
+	                                	 <%= f.check_box :featured , :class => "form-control" %>
+	                                </div>
+	                            </div>
+
+
+	                            
+	                            <div class="form-group">
+	                                <!-- Button -->
+	                                <div class="col-sm-12 login-btn">
+
+                            <%= f.submit "Valider", :class => "btn btn-primary"%>
+
+	                                </div>
+	                            </div>
+	                        <% end %>
+	                    </div>
+	                </div>
+	            </div>
+				</div>
+			</div>
+		</section>
+
