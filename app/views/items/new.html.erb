@@ -17,33 +17,34 @@
 	                      
 	                            <div class="form-group">
 	                                <div class="col-md-12">
-	                                	<%= f.label :title %>
+	                                	<%= f.label :title, "Titre", :style=>"display:block" %>
 	                                	 <%= f.text_field :title, :class => "form-control", :placeholder => "Le titre de l'article" %>
 	                                </div>
 	                            </div>
-	                            <div class="form-group">
-	                                <div class="col-md-12">
-	                                	<%= f.label :image_url %>
-	                                	 <%= f.url_field :image_url, :class => "form-control", :placeholder => "L'url de l'article" %>
+	                            <div class="form-group my-3">
+	                                <div class="col-md-12" style="margin-top: 30px">
+	                                	<%= f.label :image_url, "URL", :style=>"display:block"  %>
+	                                	 <%= f.url_field :image_url, :class => "form-control", :placeholder => "http://www.maphoto.com/cool" %>
 	                                </div>
 	                            </div>
 
 	                            <div class="form-group">
-	                                <div class="col-md-12">
-	                                	<%= f.label :description %>
-	                                	 <%= f.text_area :description, :class => "form-control", :placeholder => "La description de l'article" %>
+	                                <div class="col-md-12" style="margin-top: 30px">
+	                                	<%= f.label :description, "Description", :style=>"display:block"   %>
+	                                	 <%= f.text_area :description, :class => "form-control", :placeholder => "Description de l'article" %>
 	                                </div>
 	                            </div>
 	                            <div class="form-group">
-	                                <div class="col-md-12">
-	                                	<%= f.label :price %>
-	                                	 <%= f.number_field :price, :class => "form-control", :placeholder => "La description de l'article" %>
+	                                <div class="col-md-12" style="margin-top: 30px">
+	                                	<%= f.label :price, "Prix", :style=>"display:block"  %>
+	                                	
+	                                	 <%= f.number_field :price, :class => "form-control", :placeholder => "Prix de l'article", :step => 0.01 %>
 	                                </div>
 	                            </div>	                            
 
 	                            <div class="form-group">
-	                                <div class="col-md-12">
-	                                	<%= f.label :description %>
+	                                <div class="col-md-12" style="margin-top: 30px">
+	                                	<%= f.label :featured, "Featured ?", :style=>"display:block"  %>
 	                                	 <%= f.check_box :featured , :class => "form-control" %>
 	                                </div>
 	                            </div>
