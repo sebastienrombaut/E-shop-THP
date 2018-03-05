@@ -19,13 +19,13 @@
                                   <div class="form-group">
                                       <div class="col-md-12">
                                         <%= f.label :email %><br />
-                                        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email Address"  %>
+                                        <%= f.email_field :email, autofocus: true, class: "form-control", autocomplete: "email", placeholder: "Email Address"  %>
                                       </div>
                                   </div>
                                   <div class="form-group">
                                       <div class="col-md-12">
                                           <%= f.label :password %><br />
-                                          <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+                                          <%= f.password_field :password, autocomplete: "off", class: "form-control" , placeholder: "Password" %>
                                       </div>
                                   </div>
                                   <% if devise_mapping.rememberable? -%>
@@ -39,7 +39,7 @@
                                   
                                   <div class="form-group">
                                     <div class="col-md-12 login-btn">
-                                    <%= f.submit "Log in" %>
+                                    <%= f.submit "Log in", class: "btn btn-primary"  %>
                                     </div>
                                   </div>
                                  
