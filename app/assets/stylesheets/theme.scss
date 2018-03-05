@@ -6573,4 +6573,16 @@ body.lb-disable-scrolling {
 .contact .scrolloff {
   pointer-events: none; }
 
+#backgroundimage1 {
+  background: url(asset-path('slider/cat1.jpg'));  background-position: center;
+ background-size: cover;
+ overflow: hidden;
+
+}
+
+#backgroundimage2 {
+  background: url(asset-path('slider/cat2.jpg'));  background-position: center;
+ background-size: cover;
+ overflow: hidden;
+}
 /*# sourceMappingURL=theme.css.map */
