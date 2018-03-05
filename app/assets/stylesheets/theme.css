@@ -4,6 +4,15 @@
   float: left;
   width: 100%; }
 
+#backgroundimage1 {
+  background: url(asset-path('assets/slider/cat1.jpg'));
+
+}
+
+#backgroundimage2 {
+  background: url(asset-path('assets/slider/cat2.jpg'));  
+}
+
 .product-box h5, .post-list-sidebar-item .h6 {
   overflow: hidden;
   text-overflow: ellipsis;
