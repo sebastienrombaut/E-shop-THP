@@ -1,0 +1,192 @@
+%list-style {
+	li {
+		display: block;
+		padding: $padding-base;
+		border-bottom: 1px solid $body-bg;
+
+		span {
+			display: block;
+		}
+	}
+}
+.dashboard {
+	margin-top: $margin-medium;
+
+	&-user {
+		margin-bottom: 0;
+		padding: 0 ;
+		border-bottom: 1px solid $body-bg;
+		display: block;
+		width: 100%;
+		float: left;
+
+		li {
+			display: block;
+
+		}
+		img {
+			margin: 0 auto;
+			width: 80px;
+			float: left;
+			padding: $padding-base;
+			border-radius: 50%;
+		}
+		span {
+			margin: $margin-medium 0;
+			display: inline-block;
+			float: left;
+			font-weight: 700;
+		}
+	}
+	&-links {
+		margin-bottom: $margin-medium;
+		background: $main-light-color;
+
+		a {
+			display: block;
+			padding: $padding-base;
+
+			&.active {
+				background: $main-theme-color;
+				color: $main-light-color;
+				font-weight: 700;
+			}
+		}
+		li {
+			border-bottom: 1px solid $body-bg;
+
+			&:first-child {
+				border-top: 1px solid $body-bg;
+			}
+		}
+	}
+	&-activity {
+		background: $main-light-color;
+		margin-bottom: $margin-medium;
+		@extend %list-style;
+
+		&-date {
+			font-size: 11px;
+			opacity: 0.5;
+		}
+	}
+	&-profile {
+		&-form, &-info {
+			@extend %list-style;
+			background: $main-light-color;
+
+			span {
+				display: inline-block;
+				float: left;
+				font-weight: 700;
+				width: 130px;
+			}
+			ul {
+				margin-bottom: $margin-medium;
+			}
+			.btn {
+				margin: 0 $margin-base $margin-base;
+			}
+		}
+		&-form {
+			border-top: 1px solid $body-bg;
+			padding: $padding-base $padding-base 0 $padding-base;
+
+			.btn {
+				margin: $margin-base 0 $margin-base;
+			}
+		}
+	}
+	&-orders {
+		li span {
+			float: left;
+
+			@include smartphone {
+				//width: 100%;
+			}
+		}
+		&-info {
+			color: $brand-success;
+		}
+	}
+	&-orders, &-address {
+		background: $main-light-color;
+		//padding: $padding-medium;
+		float: left;
+
+		&-row {
+			width: 100%;
+			float: left;
+		}
+		&-label {
+			font-weight: 700;
+		}
+		ul {
+			float: left;
+			width: 100%;
+		}
+		li {
+			padding: $padding-base;
+			border-bottom: 1px solid $body-bg;
+			float: left;
+			width: 100%;
+
+			&:first-child {
+				border-top: 1px solid $body-bg;
+			}
+			ul {
+				margin: 0;
+
+				li {
+					padding: 0;
+					border: 0;
+
+					&:first-child {
+						border-top: none;
+					}
+				}
+			}
+		}
+	}
+	&-agreements {
+		@extend %list-style;
+
+		li {
+			background: $main-light-color none repeat scroll 0 0;
+			display: block;
+			float: left;
+		}
+		span {
+			margin: 0;
+		}
+		label {
+			padding-left: $padding-base / 2;
+		}
+		.custom-checkbox label:before,
+		.custom-checkbox label:after {
+			top: 3px;
+		}
+	}
+	&-loyalty {
+
+		&-label {
+			display: block;
+			font-weight: 700;
+			width: 100%;
+		}
+		&-number {
+			font-size: 70px;
+			display: block;
+		}
+		&-your-code {
+			font-weight: 700;
+			color: $main-theme-color;
+		}
+	}
+	&-box {
+		background: white;
+		padding: $padding-medium;
+		margin-bottom: $margin-medium;
+		border: 4px solid $main-dark-color;
+	}
+}

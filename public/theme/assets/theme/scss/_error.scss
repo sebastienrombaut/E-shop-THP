@@ -1,0 +1,17 @@
+.error-page {
+	.search-box {
+		position: relative;
+	}
+
+	.input-group-btn {
+		background: $main-light-color;
+		bottom: 0;
+		position: absolute;
+		right: 0;
+		width: 55px;
+	}
+	input {
+		padding-right: 70px;
+	}
+
+}

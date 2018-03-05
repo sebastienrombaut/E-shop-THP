@@ -1,0 +1,66 @@
+.navbar {
+	border: none;
+
+			a {
+				padding: $padding-base;
+				//color: white;
+				font-family: $main-font;
+				font-weight: 400;
+			}
+			
+	&-brand {
+		color: white;
+		font-family: $main-font;
+
+		span {
+			color: $main-theme-color;
+		}
+
+	}
+
+	&-nav {
+		padding: 0;
+		& > .active > a,
+		& > .active > a:hover,
+		& > .active > a:focus {
+			background: $main-theme-color;
+			opacity: 1;
+			color: white;
+		}
+> li > .dropdown-menu {
+	margin-top: 1px;
+}
+	}
+
+	&-inverse {
+		border: none;
+		.navbar-nav {
+			& > .active > a,
+			& > .active > a:hover,
+			& > .active > a:focus {
+				background: $main-theme-color;
+				opacity: 1;
+				color: white;
+			}
+
+		}
+
+	}
+
+	&-fixed-top {
+
+		// to prevent scroll issue on mobile devices, when top is fixed to top
+		@include smartphone {
+			position: absolute;
+			max-height: auto;
+		}
+
+		@include tablet {
+			position: absolute;
+			max-height: auto;
+		}
+	}
+
+
+
+}

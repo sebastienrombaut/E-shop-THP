@@ -1,0 +1,224 @@
+.home {
+	@extend %box;
+	overflow: hidden;
+
+	&-slider {
+		position: relative;
+
+		&-pagination {
+			border: 0 none;
+			bottom: 0;
+			position: absolute;
+			text-align: center;
+			z-index: 10;
+		}
+
+		&-prev {
+			color: $main-light-color;
+			font-size: 60px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 20px;
+			z-index: 200;
+			text-shadow: -2px 0px 1px rgba(0,0,0,0.2);
+		}
+
+		&-next {
+			color: $main-light-color;
+			font-size: 60px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 20px;
+			z-index: 200;
+			text-shadow: 2px 0px 1px rgba(0,0,0,0.2);
+		}
+
+		&-full-page {
+			.swiper-slide {
+				background-size: cover;
+				background-position: center;
+				min-height: 100vh;
+				align-items: center;
+			}
+
+		}
+
+		&-half-page {
+			.swiper-slide {
+				background-size: cover;
+				background-position: center;
+				min-height: 50vh;
+				align-items: center;
+			}
+
+		}
+
+		&-centered {
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-moz-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			-moz-box-orient: vertical;
+			-moz-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+			-moz-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			min-height: 100vh;
+		}
+
+		.swiper-slide {
+			@include smartphone {
+				padding: 0 $padding-medium;
+
+				h1,
+				.h1 {
+					font-size: 32px;
+				}
+
+			}
+
+		}
+
+	}
+
+	&-promo {
+		width: 100%;
+		float: left;
+
+		h2 {
+			text-transform: uppercase;
+			position: relative;
+			margin-bottom: $margin-large;
+
+			&:after {
+				position: absolute;
+				content: "";
+				width: 80px;
+				height: 4px;
+				background: $main-theme-color;
+				left: 50%;
+				bottom: -30px;
+				transform: translateX(-50%);
+			}
+
+		}
+
+		&-half-row {
+			width: 50%;
+			float: left;
+			position: relative;
+		}
+
+		&-row {
+			width: 100%;
+			float: left;
+			position: relative;
+
+			&-half {
+				width: 50%;
+				float: left;
+
+				@include smartphone {
+					width: 100%;
+				}
+
+			}
+
+		}
+
+		&-image-left {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 50%;
+			left: 0;
+			background-size: cover;
+			background-position: center center;
+
+			@include smartphone {
+				position: relative;
+				width: 100%;
+				height: 300px;
+				right: 0;
+			}
+
+		}
+
+		&-image-right {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 50%;
+			right: 0;
+			background-size: cover;
+			background-position: center center;
+
+			@include smartphone {
+				position: relative;
+				width: 100%;
+				height: 300px;
+				left: 0;
+			}
+
+		}
+
+		p {
+			margin-bottom: $margin-medium;
+			max-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0 $padding-medium;
+		}
+
+	}
+
+	&-featured {
+		@extend %box;
+
+		&-bg {
+			background: url('../../img/bg/featured-bg.jpg');
+			background-size: cover;
+		}
+
+	}
+
+	&-recommended {
+		@extend %box;
+
+		.product-box {
+			@include medium-tablet {
+				margin-bottom: $margin-medium !important;
+			}
+
+			@include smartphone {
+				margin-bottom: $margin-medium !important;
+			}
+
+		}
+
+		&-bg {
+			background: url('../../img/bg/recommended-bg.jpg');
+			background-size: cover;
+		}
+
+	}
+
+}

@@ -1,0 +1,44 @@
+.cms {
+	//background: white;
+	margin-top: $margin-medium;
+	float: left;
+	//padding: $padding-base 0;
+
+	&-links {
+		margin-bottom: $margin-medium;
+		& .panel-body {
+			padding: 0;
+		}
+		li {
+			width: 100%;
+
+			a {
+				display: block;
+				padding: $padding-base;
+				border-bottom: 1px solid $body-bg;
+			}
+			&:last-child {
+				a {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&-content {
+		background: white;
+		padding: $padding-base;
+	}
+
+	&-row {
+		margin: $margin-base 0;
+		padding: $padding-base 0;
+				border-bottom: 1px solid $body-bg;
+					&:last-child {
+			
+					border-bottom: 0;
+				
+			}
+			
+	}
+}

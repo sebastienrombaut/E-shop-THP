@@ -1,0 +1,72 @@
+footer {
+	display: block;
+	width: 100%;
+	float: left;
+	margin-top: $margin-large;
+
+
+
+	.footer {
+		border-top: 1px solid $body-bg;
+		&-bottom {
+			background: $body-bg;
+			
+			color: $main-gray;
+			p {
+				margin: $margin-base 0;
+			}
+		}
+		.smartphone-fw {
+			margin-bottom: $margin-medium;
+		}
+		a, p, address{
+			color: $main-gray;
+			transition: all 150ms ease-in-out;
+			font-size: 13px;
+		}
+		a:hover {
+		color: $main-theme-color;
+		border-color: $main-theme-color;	
+		}
+		li {
+			@extend %custom-list;
+		}
+
+		&-social {
+			margin: $margin-medium 0;
+			li {
+				padding: 0;
+				&:after {
+					display: none;
+				}
+
+				a {
+					display: block;
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+					text-align: center;
+					border: 1px solid $main-gray;
+					margin-right: 5px;
+					border-radius: 5px;
+				}
+			}	
+		}
+		&-newsletter {
+			position: relative;
+			input {
+				padding-right: 80px;
+			}
+			button {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+		.heading {
+			span {
+				color: $main-theme-color;
+			}
+		}
+	}
+}

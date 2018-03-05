@@ -1,0 +1,250 @@
+.product {
+	&-head-row {
+		float: left;
+		width: 100%;
+		background: $main-light-color;
+		&-full {
+			padding-bottom: $padding-large;
+
+		}
+		.social-network, p{
+			float: left;
+			width: 100%;
+		}
+	}
+	&-image-wrapper {
+		padding-top: $padding-base;
+		float: left;
+	}
+	&-description {
+		margin-bottom: $margin-base * 3;
+		float: left;
+
+		&-box {
+			padding: $padding-medium;
+			float: left;
+
+			p {
+				color: $main-gray;
+				margin: $margin-base 0;
+			}
+			&-name {
+				line-height: 1.4;
+				width: 100%;
+
+				> span {
+					bottom: -15px;
+					color: $main-gray;
+					display: block;
+					font-size: 12px;
+					left: 0;
+					position: absolute;
+					right: 0;
+					font-weight: normal;
+				}
+			}
+			&-price {
+				font-family: $main-font;
+				color: $main-dark-color;
+				font-size: 20px;
+				margin-bottom: $margin-medium;
+				display: block;
+				font-weight: 700;
+			}
+			&-label {
+				color: $main-gray;
+				display: block;
+				font-size: 12px;
+				font-family: $main-font;
+			}
+			.countdown-container ul {
+				border: 1px solid $body-bg;
+			}
+		}
+		&-right {
+			border-left: 1px solid $body-bg;
+			padding-left: $padding-medium;
+
+			@include tablet {
+				padding: $padding-medium;
+				border: 1px solid $body-bg;
+				padding-bottom: $padding-base;
+				width: 100%;
+			}
+
+			@include smartphone {
+				padding: $padding-medium;
+				border: 1px solid $body-bg;
+				padding-bottom: $padding-base;
+				width: 100%;
+			}
+		}
+		&-row {
+			margin-bottom: $margin-medium;
+		}
+	}
+	&-button-section {
+		margin-top: $margin-base;
+		display: block;
+		float: left;
+
+		.btn {
+			width: 100%;
+			margin-bottom: $margin-base / 2;
+		}
+	}
+	&-tabs {
+		margin-top: $margin-large;
+	}
+	&-detail-row {
+		float: left;
+		width: 100%;
+		&-full {
+			background: $main-light-color;
+			border: 1px solid $body-bg;
+			padding: $padding-medium $padding-base;
+				p {
+				color: $main-gray;
+				margin: $margin-base 0;
+			}
+		}
+	}
+	&-detail-column {
+		padding: $padding-large;
+		text-align: center;
+
+		@include smartphone {
+			padding: $padding-medium;
+		}
+		h3 {
+			margin: $margin-medium 0 $margin-large 0;
+		}
+	}
+
+	&-detail-list {
+		color: $main-gray;
+		&-label {
+			color: $main-dark-color;
+		}
+		li {
+			padding: $padding-base / 3 0;
+		}
+
+		ul {
+			display: inline;
+			li {
+				display: inline;
+				
+			}
+		}
+	}
+
+	/* Indicators list style */
+	&-slide .carousel-indicators li {
+		border: medium none;
+		border-radius: 0;
+		float: none;
+		height: auto;
+		margin-bottom: 5px;
+		margin-left: 0;
+		margin-right: 5px !important;
+		margin-top: 0;
+		width: 70px;
+	}
+
+	/* Indicators images style */
+	&-slide .carousel-indicators img {
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		float: left;
+		height: auto;
+		left: 0;
+		width: 70px;
+		transition: all 300ms ease-in-out
+	}
+
+	/* Indicators active image style */
+	&-slide .carousel-indicators .active img {
+		border: 2px solid $main-theme-color;
+		opacity: 1;
+	}
+	&-rating {
+		display: inline-block;
+		color: #FFD203;
+		font-family: $main-font;
+		ul {
+			display: inline-block;
+		}
+		li {
+			display: inline-block;
+		}
+		.unactive {
+			opacity: 0.5
+		}
+	}
+	&-available {
+		color: #00A650;
+		display: block;
+		font-size: 14px;
+
+	}
+	&-color-select {
+		display: block;
+		margin: $margin-base 0;
+		width: 100%;
+
+		li {
+			display: inline-block;
+			position: relative;
+
+			&.selected {
+				&:before {
+					content: '';
+					position: absolute;
+					left: 5px;
+					right: 5px;
+					bottom: 5px;
+					top: 5px;
+					border: 5px solid $main-light-color;
+				}
+			}
+		}
+		span {
+			display: block;
+			width: 20px;
+			height: 20px;
+		}
+	}
+	&-review {
+		&-add {
+			margin-top: $margin-large;
+			margin-bottom: $margin-medium;
+			padding: $padding-medium;
+			background: rgba($body-bg, 0.25);
+			float: left;
+			width: 100%;
+			@include smartphone {
+				padding: $padding-base;
+
+			}
+		}
+		&-by {
+			color: $main-gray;
+		}
+		&-value {
+			color: $main-gray;
+			.glyphicon {
+				color: #FFD203;
+			}
+			.unactive {
+				opacity: 0.5
+			}
+		}
+		&-single {
+			margin-bottom: $margin-medium;
+		}
+		p {
+			border-bottom: 1px solid $body-bg;
+			padding-bottom: $padding-medium;
+		}
+	}
+}

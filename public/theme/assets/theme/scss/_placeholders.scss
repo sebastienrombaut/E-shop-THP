@@ -1,0 +1,98 @@
+%box {
+	display: block;
+	float: left;
+	width: 100%;
+}
+%ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+%transition {
+	transition: all 300ms ease-in-out;
+}
+%transition-long {
+	transition: all 600ms ease-in-out;
+}
+%transition-short {
+	transition: all 150ms ease-in-out;
+}
+%panel-links {
+	margin-bottom: $margin-medium;
+
+	& .panel-body {
+		padding: 0;
+	}
+	li {
+		width: 100%;
+
+		a {
+			display: block;
+			padding: $padding-base;
+			border-bottom: 1px solid $body-bg;
+			font-family: $main-font;
+		}
+		&:last-child {
+			a {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+%custom-list {
+padding-left: 20px;
+position: relative;
+&:after {
+	position: absolute;
+	content: '';
+	width: 15px;
+	top: 50%;
+	left: 0;
+	height:1px;
+	background: $main-theme-color;
+}
+}
+// %section-padding {
+// 	padding: $padding-large 0;
+
+// 	@include smartphone {
+// 	}
+// }
+// .section-padding {
+// 	@extend %section-padding;
+// }
+// .section-small-padding {
+// 	padding: $padding-medium 0;
+// }
+// .section-medium-padding {
+// 	padding: $padding-medium *1.5 0;
+// }
+// %section-bottom-padding {
+// 	padding-bottom: $padding-large;
+
+// 	@include smartphone {
+// 	}
+// }
+// .section-bottom-padding {
+// 	@extend %section-bottom-padding;
+// }
+// %section-bottom-xl-padding {
+// 	padding-bottom: $padding-x-large;
+
+// 	@include smartphone {
+// 	}
+// }
+// .section-bottom-xl-padding {
+// 	@extend %section-bottom-xl-padding;
+// }
+// %section-heading {
+// 	.section-heading {
+// 		background: white;
+// 		margin: 0;
+// 		border-bottom: 1px solid $body-bg;
+// 		text-align: center;
+// 		text-transform: lowercase;
+// 		padding: $padding-base 0;
+// 	}
+// }

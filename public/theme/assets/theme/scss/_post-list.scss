@@ -1,0 +1,30 @@
+.post-list {
+
+	&-sidebar-item {
+		width: 100%;
+		float: left;
+		padding: 0 $padding-base;
+
+		.h6 {
+			@extend %ellipsis;
+			display: block;
+			text-transform: uppercase;
+		}
+		&-description {
+			font-size: 14px;
+			color: $main-gray;
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	&-link {
+		display: block;
+		float: left;
+		width: 100%;
+		margin-top: $margin-base;
+		margin-bottom: $margin-medium;
+	}
+
+}

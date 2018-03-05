@@ -1,0 +1,278 @@
+%category-list {
+	background: white;
+	float: left;
+
+	ul {
+		padding: $padding-base;
+		float: left;
+		width: 100%;
+
+		li {
+			display: inline-block;
+		}
+	}
+}
+.category {
+	padding-top: $padding-base * 1.8;
+	background: $main-light-color;
+	border: 1px solid rgba($body-bg, 0.5);
+
+	.heading {
+		margin-left: $margin-base;
+		margin-bottom: $margin-base !important;
+	}
+	&-menu {
+		.navbar-collapse {
+			padding: 0;
+		}
+		.active {
+			background: $main-theme-color;
+			color: $main-light-color;
+			&:hover {
+				background: #ccc!important;
+			}
+		}
+		li {
+			width: 100%;
+
+			a {
+				display: block;
+				padding: $padding-base;
+				border-bottom: 1px solid $body-bg;
+				color: $main-dark-color;
+
+				&:hover, &:focus {
+					background: #ccc !important;
+				}
+				& .ti-minus {
+					display: inline-block;
+					float: right;
+				}
+				& .ti-plus {
+					display: none;
+					float: right;
+				}
+				&.collapsed {
+					& .ti-minus {
+						display: none;
+					}
+					& .ti-plus {
+						display: inline-block;
+					}
+				}
+			}
+			&:last-child {
+				a {
+					border-bottom: none;
+				}
+			}
+		}
+		ul {
+			width: 100%;
+			margin: 0;
+
+			li {
+				&:last-child {
+					border: none;
+				}
+				ul {
+					border-bottom: 1px solid $body-bg;
+
+					li {
+						// styles for sub sategory link
+						a {
+							padding: $padding-base $padding-base $padding-base $padding-medium;
+
+							i {
+								margin-right: 10px;
+								display: inline-block;
+								opacity: 0.5;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&-list {
+		@extend %category-list;
+
+		li {
+			display: block;
+			padding: $padding-base;
+			border-bottom: 1px solid $body-bg;
+		}
+	}
+	&-colors, &-sizes {
+		@extend %category-list;
+
+		li {
+			width: 100%;
+			float: left;
+
+			span {
+				margin: 0 0 $margin-base 0;
+			}
+			&:last-child {
+				span {
+					margin: 0;
+				}
+			}
+		}
+		&-box {
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			margin-right: 7px !important;
+			float: left;
+		}
+	}
+	&-price {
+		padding: $padding-base;
+		float: left;
+		width: 100%;
+		text-align: center;
+
+		input {
+			width: 65px;
+			text-align: center;
+			float: left;
+		}
+		span {
+			display: inline-block;
+			margin: 0 $margin-base;
+			float: left;
+			padding-top: $padding-base / 2;
+		}
+	}
+	&-tags {
+		@extend %category-list;
+
+		a {
+			color: $main-gray;
+			display: inline-block;
+			font-size: 12px;
+			padding: 3px 5px;
+			border: 1px solid $body-bg;
+			border-radius: 2px;
+			margin-bottom: 3px;
+			text-transform: lowercase;
+			transition: all 300ms ease-in-out;
+
+			&:hover {
+				background: $main-theme-color;
+				border-color: $main-theme-color;
+				color: white;
+			}
+		}
+	}
+	&-contact {
+		@extend %category-list;
+
+		ul span {
+			color: $main-theme-color;
+			width: 30px;
+			margin-right: $margin-medium / 3;
+			display: inline;
+		}
+		li {
+			display: block;
+			width: 100%;
+			padding: $padding-base/3 0;
+		}
+	}
+	&-generic {
+		@extend %category-list;
+
+		&-wrapper {
+			padding: $padding-base;
+		}
+		li {
+			display: block;
+			width: 100%;
+			padding: $padding-base/3 0;
+		}
+	}
+	&-product-promo {
+		@extend %category-list;
+
+		li {
+			margin-bottom: 0;
+			padding: 0;
+			border: none;
+		}
+	}
+	&-sub {
+		background: white;
+		float: left;
+		margin-bottom: $margin-medium;
+
+		ul {
+			margin-bottom: -1px;
+		}
+		li {
+			border-right: 1px solid $body-bg;
+			border-bottom: 1px solid $body-bg;
+			text-align: center;
+
+			img {
+				width: 100%;
+			}
+			span {
+				margin-bottom: $margin-base;
+				display: block;
+			}
+		}
+	}
+	&-controls {
+		padding: $padding-base;
+		float: left;
+		border-bottom: 1px solid $body-bg;
+		width: 100%;
+
+		h6 {
+			margin: 11px 0 0 0;
+
+			@include smartphone {
+				width: 100%;
+				margin-bottom: $margin-medium;
+			}
+		}
+		@include smartphone {
+			text-align: center;
+
+			div {
+				width: 100%;
+
+				.btn {
+					width: 100%;
+					margin-bottom: $margin-base;
+				}
+			}
+		}
+	}
+	&-layout {
+		margin-right: $margin-base / 2;
+
+		&-active {
+			opacity: 0.3
+		}
+		a {
+			display: inline-block;
+			padding: 5px;
+		}
+	}
+	&-pagination {
+		background: $main-light-color;
+		padding-top: $padding-base;
+		padding-bottom: 9px;
+		width: 100%;
+
+		nav {
+			text-align: center;
+		}
+		ul {
+			margin: 0;
+		}
+	}
+}

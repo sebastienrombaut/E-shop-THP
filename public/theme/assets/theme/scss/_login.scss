@@ -1,0 +1,41 @@
+.login {
+	margin-top: $margin-large;
+
+	.panel {
+		margin-bottom: $margin-large;
+
+		&-body {
+			padding: $padding-medium;
+
+			@include smartphone {
+				padding: $padding-base
+			}
+		}
+	}
+	&-btn {
+		margin-top: $margin-medium;
+		float: left;
+		width: 100%;
+		.btn {
+			margin-bottom: $margin-base;
+			@include smartphone {
+				width: 100%;
+			}
+		}
+	}
+	&-context-info {
+		font-family: $main-font-secondary;
+		font-size: 14px;
+		font-weight: 300;
+		padding-top: $padding-base / 5
+	}
+	form div:last-child {
+		margin-bottom: 0;
+	}
+	label {
+		display: none;
+	}
+	.custom-checkbox label {
+		display: block;
+	}
+}
