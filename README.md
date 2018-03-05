@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Notre app heroku : https://eshop-bali.herokuapp.com/
 
-Things you may want to cover:
 
-* Ruby version
+## Liens utiles
+Comment intégrer un thème Bootstrap dans une app Rails ?
+https://www.notch8.com/implementing-a-bootstrap-theme/
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
