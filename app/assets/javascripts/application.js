@@ -13,3 +13,11 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require wow
+//= require swiper.min
+//= require bootstrap.min
+//= require jquery.countTo
+//= require jquery.inview
+//= require jquery.countdown
+//= require main
+
