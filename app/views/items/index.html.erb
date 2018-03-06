@@ -79,17 +79,19 @@
           <!-- / CATEGORY CONTROLS-->
 
           <!-- PRODUCT LISTING -->
-          <div class="row">
+          <div class="row" style = "width:100vh;">
                 <!-- SINGLE PRODUCT BOX -->
 
                 <% @items.each do |item| %>
 
-                <div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
+                <div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s" style = "margin:10px;">
                 <div class="product-box  product-box-vertical">
                   <div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
                     <div class="product-box-image">
                         <%= link_to item do %>
-                      <%= image_tag item.image_url, :class => "img-responsive", :alt => "product image"%>
+                      <div style = "height: 300px;min-width: 250px; overflow:hidden; background-color: gray; text-align: center;">
+                      <%= image_tag item.image_url, :class => "img-responsive", :alt => "product image", :style => "min-width: 100%; min-height:100%; width:auto; height:auto; overflow:hidden;"%>
+                    </div>
                       <span class="product-box-hover-content zoom">
                         <span class="product-box-hover-content-container">
 
@@ -114,9 +116,9 @@
 
                     
                     <span class="product-box-price h5"><%=item.price%> €</span>
-                    <a class="btn btn-link btn-sm no-padding add-item" data-image="assets/img/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
-                      Ajouter au panier
-                    </a> 
+  
+                    <%= link_to "Ajouter au panier", add_cart_item_path(item), method: :post, :class=>"btn btn-link btn-sm no-padding add-item"%>
+                      
                   </div>
                   </div>
                 </div>
