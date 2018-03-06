@@ -1,6 +1,15 @@
 class ItemsController < ApplicationController
   def index
   	@items = Item.all
+    @itemsfeatured  = []
+
+      @items.each do |item|
+        if item.featured 
+          @itemsfeatured << item
+        end
+      end
+    
+        @itemsfeatured
   end
 
   def new
