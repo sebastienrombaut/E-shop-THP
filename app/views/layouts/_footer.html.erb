@@ -5,10 +5,9 @@
 	                     <div class="smartphone-fw col-sm-3">
 	                     <h6 class="heading mt-0"><span>//</span> CONTACT DATA</h6>
 	                            <address>
-	                                <strong>Laurent store</strong><br>
-	                                1355 Market Street, Suite 900<br>
-	                                San Francisco, CA 94103<br>
-	                                (123) 456-7890
+	                                <strong>Team Bali</strong><br>
+	                                Hotel Puri Sanur, Danau Buyan Street<br>
+	                                Sanur, Bali<br>
 	                            </address>
 
 
@@ -16,30 +15,26 @@
 	                    <div class="smartphone-fw col-xs-6 col-sm-4 col-md-2">
 	                        <h6 class="heading mt-0"><span>//</span> INFORMATION</h6>
 	                        <ul>
-	                            <li> <a href="#"> Lorem Ipsum </a> </li>
-	                            <li> <a href="#"> Lorem Ipsum </a> </li>
-	                            <li> <a href="#"> Lorem Ipsum </a> </li>
-	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                            <li> <a href="/"> About us </a> </li>                           
 	                        </ul>
 	                    </div>
 
 	                    <div class="smartphone-fw col-xs-6 col-sm-4 col-md-2">
 	                        <h6 class="heading mt-0"><span>//</span> TOP CATEGORIES</h6>
 	                        <ul>
-	                            <li> <a href="#"> Lorem Ipsum </a> </li>
-	                            <li> <a href="#"> Lorem Ipsum </a> </li>
-	                            <li> <a href="#"> Lorem Ipsum </a> </li>
-	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                            <li> <a href="/"> Featured </a> </li>
+	                            <li> <a href="/"> Bestsellers </a> </li>
+	                            <li> <a href="/"> New </a> </li>
 	                        </ul>
 	                    </div>
 
 	                    <div class="smartphone-fw col-xs-6 col-sm-4 col-md-2">
 	                        <h6 class="heading mt-0"><span>//</span> ACCOUNT</h6>
 	                        <ul>
-	                            <li> <a href="#"> Lorem Ipsum </a> </li>
-	                            <li> <a href="#"> Lorem Ipsum </a> </li>
-	                            <li> <a href="#"> Lorem Ipsum </a> </li>
-	                            <li> <a href="#"> Lorem Ipsum </a> </li>
+	                            <li><%= link_to "Edit your account", edit_user_registration_path%></li>
+	                            <li><%= link_to "Log out", destroy_user_session_path, method: :delete%>
+	                            <li><%= link_to "Cancel your account", user_registration_path, method: :delete, data: {confirm: "Really Honey?"}%>
+	                            </li>
 	                        </ul>
 	                    </div>
 	     
@@ -58,10 +53,10 @@
 	                        </form>
 
 	                        <ul class="footer-social" data-wow-delay="0.6s">
-	                            <li><a href="#" class="pull-left"><span class="ti-facebook"></span></a></li>
-	                            <li><a href="#" class="pull-left"><span class="ti-twitter"></span></a></li>
-	                            <li><a href="#" class="pull-left"><span class="ti-instagram"></span></a></li>
-	                            <li><a href="#" class="pull-left"><span class="ti-youtube"></span></a></li>
+	                            <li><a href="https://www.facebook.com/welovecatsandkittens/" class="pull-left"><span class="ti-facebook"></span></a></li>
+	                            <li><a href="https://twitter.com/Cats" class="pull-left"><span class="ti-twitter"></span></a></li>
+	                            <li><a href="https://www.instagram.com/cats_of_instagram/?hl=fr" class="pull-left"><span class="ti-instagram"></span></a></li>
+	                            <li><a href="https://www.youtube.com/watch?v=iRXJXaLV0n4" class="pull-left"><span class="ti-youtube"></span></a></li>
 	                        </ul>
 	                    </div>
 	                </div>
@@ -70,7 +65,7 @@
 	        
 	        <div class="footer-bottom">
 	            <div class="container">
-	                <p class="pull-left"> Copyright © Laurent 2017. All right reserved. </p>
+	                <p class="pull-left"> Copyright © TEAM BALI THP All right reserved. </p>
 	            </div>
 	        </div>
 </footer>

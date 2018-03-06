@@ -1,19 +1,12 @@
 Rails.application.routes.draw do
 
-
-  get 'carts/add'
-
-  resources :carts do
+  resources :carts, only: [:index, :remove, :show] do #route qui permet de créer un id dans l'url carts/remove ce qui permet de trouver le bon item à supprimer
   	post 'carts/remove', on: :member
   end
 
-  
-
-
-
   devise_for :users
 
-  resources :items do
+  resources :items do #route qui permet de créer un id dans l'url add_cart ce qui permet de trouver le bon item à ajouter
     post "add_cart", on: :member
   end
 
