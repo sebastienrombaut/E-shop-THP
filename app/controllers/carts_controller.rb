@@ -5,8 +5,13 @@ class CartsController < ApplicationController
   end
 
   def remove
+  	@item = Item.find(params[:id])
+  	@cart = current_user.cart
+  	@cart.items.delete(@item)
+  	redirect_to cart_path
   end
 
   def show
+  	@cart = current_user.cart
   end
 end

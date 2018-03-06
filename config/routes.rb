@@ -3,11 +3,13 @@ Rails.application.routes.draw do
 
   get 'carts/add'
 
-  get 'carts/remove'
+  resources :carts do
+  	post 'carts/remove', on: :member
+  end
 
-  get 'carts/show'
+  
 
-  post 'items/add_cart'
+
 
   devise_for :users
 

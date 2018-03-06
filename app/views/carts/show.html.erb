@@ -1,2 +1,64 @@
-<h1>Carts#show</h1>
-<p>Find me in app/views/carts/show.html.erb</p>
+		<div class="container mt-30">
+			<div class="row">
+				<div class="col-md-9">
+					<ul class="cart-items width-100 pull-left pl-30 pr-30 pb-30 pt-30 border">
+		                <li class="cart-items-labels visible-lg-block visible-md-block row"> 
+		                    <span class="col-md-6">product</span>
+		                    <span class="col-md-2 text-center">quantity</span> 
+		                    <span class="col-md-4 text-right">price</span>
+		                </li>
+
+		                <% @cart.items.each do |item| %>
+	
+
+		                <li class="row">
+		                    <span class="cart-image col-xs-6 col-sm-2">
+		                        <%= image_tag item.image_url, :class => "img-responsive", :alt => "product image"%> 
+
+		                    </span>
+
+		                    <div class="cart-item-right col-md-10">
+		                    	<div class="row">
+		                            <span class="cart-description col-xs-12 col-md-5">
+		                                <a class="h5" href="#"><%= item.title%></a>				   
+		                                <span class="cart-item-price h5">$ <%= item.price %></span>
+		                            </span>
+
+									<span class="col-md-2 col-sm-12">
+										<input class="text-center form-control" type="text" value="1">
+									</span>
+
+		                            <span class="col-md-5 col-sm-12 text-right">
+		                                <span class="cart-price pull-right">$<%= item.price %> <div class="cart-remove">
+		                               <%=link_to "", carts_remove_cart_path(item), method: :post, :class=>"ti-trash icon pull-right mt-5 ml-10"%>
+		                                </div></span>
+		                               
+		                            </span>
+		                        </div>
+		                    </div>
+		                </li>
+		                <%end%>
+		          
+		            </ul>
+				</div>
+
+				<div class="col-md-3">
+                    <div class="cart-right">
+                        <ul class="cart-summary">
+                            <li>Total <span>$833.00</span> </li>
+                            <li>Shipping <span>Free</span> </li>
+                            <li>Total tax <span>$77.00</span> </li>
+                            <li>Total <span>$900.00</span> </li>
+                        </ul>
+                        <div class="cart-discount">
+                            <input class="width-100 form-control" placeholder="Coupon code" type="text">
+                            <button class="width-100 btn btn-margin btn-default" type="button"><span class="ti-gift"></span>Apply</button>
+                        </div>
+
+                        <a class="btn btn-margin btn-primary width-100" data-target="#order-modal" data-toggle="modal" href="#">
+                            Order now <span class="ti-arrow-right"></span>
+                        </a>
+                    </div>
+                </div>
+			</div>
+		</div>

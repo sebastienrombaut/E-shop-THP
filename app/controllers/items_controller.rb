@@ -55,10 +55,13 @@ class ItemsController < ApplicationController
     
         if @cart
         @cart.items << @item 
+        redirect_to items_path
        else 
         @cart = current_user.create_cart
         @cart.items << @item 
+        redirect_to items_path
        end
+
     else redirect_to new_user_session_path
     end
   end
