@@ -31,38 +31,27 @@
 					<div class="tab-content">
 	              		<div role="tabpanel" class="tab-pane fade in active row" id="featured">
        					<!-- SINGLE PRODUCT BOX -->
-	    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
+<% @itemsfeatured.each do |item| %>
+
+<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
 			    			<div class="product-box  product-box-vertical">
 				    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
 				    				<div class="product-box-image">
-				    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
+				    					<%= image_tag(item.image_url, :class=>"img-responsive", :alt=>"product image", :style => "width:100%; height:auto")%>
 				    					<span class="product-box-hover-content zoom">
 				    						<span class="product-box-hover-content-container">
-				   								<span class="product-box-hover-content-icons">
-					    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
-					    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
-					    							<a href="#" title="share"><span class="ti-share"></span></a>
-				    							</span>
-				    							<span>S | M | L | XL | XXL</span>
+				   								<span style = "font-size:150%; padding: 15px"><%= item.description[0..150] %> ...</span>
 				    						</span>
 				    					</span>
 				    				</div>
 
 				    				<div class="product-box-details">
-					    				<span class="product-box-new">new!</span>
-										<h5>Laurent handbag</h5>
-							            <div class="product-box-rating">
-				                            <ul>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
-				                            </ul>
-				                        </div>
+					    				
+										<h5><%= item.title %></h5>
 
-										<span class="product-box-old-price">$ 122.33</span>
-										<span class="product-box-price h5">$ 22.33</span>
+
+										
+										<span class="product-box-price h5">$ <%=item.price%></span>
 										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 											add to cart
 										</a>
@@ -70,90 +59,10 @@
 			    				</div>
 			    			</div>
 			    		</div>
-			    		<!-- / SINGLE PRODUCT BOX -->
-       					<!-- SINGLE PRODUCT BOX -->
-	    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
-			    			<div class="product-box  product-box-vertical">
-				    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
-				    				<div class="product-box-image">
-				    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
-				    					<span class="product-box-hover-content zoom">
-				    						<span class="product-box-hover-content-container">
-				   								<span class="product-box-hover-content-icons">
-					    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
-					    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
-					    							<a href="#" title="share"><span class="ti-share"></span></a>
-				    							</span>
-				    							<span>S | M | L | XL | XXL</span>
-				    						</span>
-				    					</span>
-				    				</div>
 
-				    				<div class="product-box-details">
-					    				<span class="product-box-new">new!</span>
-										<h5>Laurent handbag</h5>
-							            <div class="product-box-rating">
-				                            <ul>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
-				                            </ul>
-				                        </div>
 
-										<span class="product-box-old-price">$ 122.33</span>
-										<span class="product-box-price h5">$ 22.33</span>
-										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
-											add to cart
-										</a>
-									</div>
-			    				</div>
-			    			</div>
-			    		</div>
-			    		<!-- / SINGLE PRODUCT BOX -->
-       					<!-- SINGLE PRODUCT BOX -->
-	    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
-			    			<div class="product-box  product-box-vertical">
-				    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
-				    				<div class="product-box-image">
-				    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
-				    					<span class="product-box-hover-content zoom">
-				    						<span class="product-box-hover-content-container">
-				   								<span class="product-box-hover-content-icons">
-					    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
-					    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
-					    							<a href="#" title="share"><span class="ti-share"></span></a>
-				    							</span>
-				    							<span>S | M | L | XL | XXL</span>
-				    						</span>
-				    					</span>
-				    				</div>
-
-				    				<div class="product-box-details">
-					    				<span class="product-box-new">new!</span>
-										<h5>Laurent handbag</h5>
-							            <div class="product-box-rating">
-				                            <ul>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
-				                            </ul>
-				                        </div>
-
-										<span class="product-box-old-price">$ 122.33</span>
-										<span class="product-box-price h5">$ 22.33</span>
-										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
-											add to cart
-										</a>
-									</div>
-			    				</div>
-			    			</div>
-			    		</div>
-			    		<!-- / SINGLE PRODUCT BOX -->
-	              		</div>
+<% end %>
+</div>
 
 	              		<div role="tabpanel" class="tab-pane fade in row" id="best">
        					<!-- SINGLE PRODUCT BOX -->
@@ -164,19 +73,15 @@
 				    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
 				    					<span class="product-box-hover-content zoom">
 				    						<span class="product-box-hover-content-container">
-				   								<span class="product-box-hover-content-icons">
-					    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
-					    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
-					    							<a href="#" title="share"><span class="ti-share"></span></a>
-				    							</span>
+
 				    							<span>S | M | L | XL | XXL</span>
 				    						</span>
 				    					</span>
 				    				</div>
 
 				    				<div class="product-box-details">
-					    				<span class="product-box-new">new!</span>
-										<h5>Laurent handbag</h5>
+					    				
+										<h5>Best1</h5>
 							            <div class="product-box-rating">
 				                            <ul>
 				                                <li><span class="glyphicon glyphicon-star"></span></li>
@@ -187,7 +92,7 @@
 				                            </ul>
 				                        </div>
 
-										<span class="product-box-old-price">$ 122.33</span>
+										
 										<span class="product-box-price h5">$ 22.33</span>
 										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 											add to cart
@@ -216,8 +121,8 @@
 				    				</div>
 
 				    				<div class="product-box-details">
-					    				<span class="product-box-new">new!</span>
-										<h5>Laurent handbag</h5>
+					    				
+										<h5>Best2</h5>
 							            <div class="product-box-rating">
 				                            <ul>
 				                                <li><span class="glyphicon glyphicon-star"></span></li>
@@ -228,7 +133,7 @@
 				                            </ul>
 				                        </div>
 
-										<span class="product-box-old-price">$ 122.33</span>
+									
 										<span class="product-box-price h5">$ 22.33</span>
 										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 											add to cart
@@ -257,8 +162,8 @@
 				    				</div>
 
 				    				<div class="product-box-details">
-					    				<span class="product-box-new">new!</span>
-										<h5>Laurent handbag</h5>
+					    				
+										<h5>Best3</h5>
 							            <div class="product-box-rating">
 				                            <ul>
 				                                <li><span class="glyphicon glyphicon-star"></span></li>
@@ -269,7 +174,7 @@
 				                            </ul>
 				                        </div>
 
-										<span class="product-box-old-price">$ 122.33</span>
+										
 										<span class="product-box-price h5">$ 22.33</span>
 										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 											add to cart
@@ -304,7 +209,7 @@
 
 					    				<div class="product-box-details">
 						    				<span class="product-box-new">new!</span>
-											<h5>Laurent handbag</h5>
+											<h5>New1</h5>
 								            <div class="product-box-rating">
 					                            <ul>
 					                                <li><span class="glyphicon glyphicon-star"></span></li>
@@ -315,7 +220,7 @@
 					                            </ul>
 					                        </div>
 
-											<span class="product-box-old-price">$ 122.33</span>
+											
 											<span class="product-box-price h5">$ 22.33</span>
 											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 												add to cart
@@ -345,7 +250,7 @@
 
 					    				<div class="product-box-details">
 						    				<span class="product-box-new">new!</span>
-											<h5>Laurent handbag</h5>
+											<h5>New2</h5>
 								            <div class="product-box-rating">
 					                            <ul>
 					                                <li><span class="glyphicon glyphicon-star"></span></li>
@@ -356,7 +261,7 @@
 					                            </ul>
 					                        </div>
 
-											<span class="product-box-old-price">$ 122.33</span>
+										
 											<span class="product-box-price h5">$ 22.33</span>
 											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 												add to cart
@@ -386,7 +291,7 @@
 
 					    				<div class="product-box-details">
 						    				<span class="product-box-new">new!</span>
-											<h5>Laurent handbag</h5>
+											<h5>New3</h5>
 								            <div class="product-box-rating">
 					                            <ul>
 					                                <li><span class="glyphicon glyphicon-star"></span></li>
@@ -397,7 +302,7 @@
 					                            </ul>
 					                        </div>
 
-											<span class="product-box-old-price">$ 122.33</span>
+										
 											<span class="product-box-price h5">$ 22.33</span>
 											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 												add to cart
@@ -452,7 +357,7 @@
 					                            </ul>
 					                        </div>
 
-											<span class="product-box-old-price">$ 122.33</span>
+											
 											<span class="product-box-price h5">$ 22.33</span>
 											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 												add to cart
@@ -492,7 +397,7 @@
 					                            </ul>
 					                        </div>
 
-											<span class="product-box-old-price">$ 122.33</span>
+							
 											<span class="product-box-price h5">$ 22.33</span>
 											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 												add to cart
@@ -532,7 +437,7 @@
 					                            </ul>
 					                        </div>
 
-											<span class="product-box-old-price">$ 122.33</span>
+									
 											<span class="product-box-price h5">$ 22.33</span>
 											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 												add to cart
@@ -572,7 +477,7 @@
 					                            </ul>
 					                        </div>
 
-											<span class="product-box-old-price">$ 122.33</span>
+										
 											<span class="product-box-price h5">$ 22.33</span>
 											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 												add to cart
@@ -612,7 +517,7 @@
 					                            </ul>
 					                        </div>
 
-											<span class="product-box-old-price">$ 122.33</span>
+									
 											<span class="product-box-price h5">$ 22.33</span>
 											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 												add to cart
@@ -652,7 +557,7 @@
 					                            </ul>
 					                        </div>
 
-											<span class="product-box-old-price">$ 122.33</span>
+										
 											<span class="product-box-price h5">$ 22.33</span>
 											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
 												add to cart
