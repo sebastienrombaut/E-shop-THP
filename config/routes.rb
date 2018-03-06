@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'orders/new'
+
   resources :carts, only: [:index, :remove, :show] do #route qui permet de créer un id dans l'url carts/remove ce qui permet de trouver le bon item à supprimer
   	post 'carts/remove', on: :member
   end
