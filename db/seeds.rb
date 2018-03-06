@@ -11,7 +11,7 @@ Item.create(
   description: "Le british shorthair est une race de chat originaire de Grande-Bretagne. Ce chat de taille moyenne à grande est caractérisé par sa tête très ronde et ses grands yeux ronds.",
   price: "953.00",
   image_url: 'products/product-01.jpg',
-  featured: false,
+  featured: true,
   numbersales: 0
 )
 
@@ -20,7 +20,7 @@ Item.create(
   description: "L'origine se trouve dans le Sud-Est de l'Asie : la race pourrait descendre des chats sacrés des temples de Siam (d'où leur nom). Ces chats étaient déjà représentés dans certains manuscrits retrouvés à Ayutthaya (ancienne capitale du Siam) et datant de 1350.",
   price: "800.00",
   image_url: 'products/siamois.jpeg',
-  featured: false,
+  featured: true,
   numbersales: 0
 )
 
@@ -29,7 +29,7 @@ Item.create(
   description: "Le persan est une race de chat à poil long. Ce chat de taille moyenne à grande est caractérisé par son poil long et abondant, sa silhouette toute en rondeur et son visage au museau très court. Reconnue depuis la fin du xixe siècle, la race est d'abord modifiée par les Anglais, puis essentiellement par les États-Unis après la Seconde Guerre mondiale.",
   price: "955.00",
   image_url: 'products/persan.jpeg',
-  featured: false,
+  featured: true,
   numbersales: 0
 )
 
@@ -38,7 +38,7 @@ Item.create(
   description: "Le ragdoll est une race de chats originaire des États-Unis. Le nom de ce chat de grande taille provient d'une particularité étonnante : lorsqu'on le porte, il devient aussi mou qu'une poupée de chiffon, « ragdoll » en anglais.",
   price: "1086.00",
   image_url: 'products/ragdoll.jpeg',
-  featured: false,
+  featured: true,
   numbersales: 0
 )
 
