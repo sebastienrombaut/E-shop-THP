@@ -91,7 +91,7 @@ Item.create(
   title: "Exotic Shorthair",
   description: "L'exotic shorthair ou simplement exotic est une race de chats originaire des États-Unis. L'exotic shorthair est la variété à poils courts du persan. Il partage sa morphologie ramassée toute en rondeur et le profil écrasé du visage.",
   price: "800.00",
-  image_url: 'products/exotic_shorthair.jpeg',
+  image_url: 'http://elelur.com/data_images/cat-breeds/exotic-shorthair/exotic-shorthair-02.jpg',
   featured: false,
   numbersales: 0
 )

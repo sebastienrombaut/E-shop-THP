@@ -23,16 +23,18 @@
 				            <span class="product-description-box-price"><%= @item.price%>$</span>
 
 				                <ul class="product-detail-list mb-30">
+				                	<% if @item.featured %>
 				                    <li>
-				                        <span class="product-detail-list-label">Reviews</span>
+				                        <span class="product-detail-list-label"></span>
 				                        <ul class="pull-right product-review-value">
+				                            <li><span >Featured Article</span></li>
 				                            <li><span class="glyphicon glyphicon-star"></span></li>
 				                            <li><span class="glyphicon glyphicon-star"></span></li>
 				                            <li><span class="glyphicon glyphicon-star"></span></li>
-				                            <li><span class="glyphicon glyphicon-star"></span></li>
-				                            <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
+				                            
 				                        </ul>
 				                    </li>
+				                    <% end %>
 
 				                   
 
@@ -46,24 +48,15 @@
 					        <div class="box">
 					         <hr>
 					             <div class="box text-left">
-					                <h3 class="">Description de l'article # <%=@item.id%></h3>
-					                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+					                <h3 class="">Description du <%=@item.title%></h3>
+					                <p><%= @item.description %></p>
 					                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p><br><br>
 
-					                <h4 class="">Ut enim ad minim veniam</h4>
-					                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+					                
 					             </div>
 					        </div>
 					      
-					        <div class="width-100 pull-left">
-					            <ul class="social-network social-circle">
-					                <li><a href="#" class="icoRss" title="Rss"><i class="ti-rss-alt"></i></a></li>
-					                <li><a href="#" class="icoFacebook" title="Facebook"><i class="ti-facebook"></i></a></li>
-					                <li><a href="#" class="icoTwitter" title="Twitter"><i class="ti-twitter"></i></a></li>
-					                <li><a href="#" class="icoGoogle" title="Google +"><i class="ti-google"></i></a></li>
-					                <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="ti-linkedin"></i></a></li>
-					            </ul>
-					        </div>
+					       
 			    		</div>
 					</div>
 				</div>
