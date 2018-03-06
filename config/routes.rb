@@ -7,8 +7,13 @@ Rails.application.routes.draw do
 
   get 'carts/show'
 
+  post 'items/add_cart'
+
   devise_for :users
-  resources :items
+
+  resources :items do
+    post "add_cart", on: :member
+  end
 
   root 'static_pages#home'
 

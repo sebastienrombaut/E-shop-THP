@@ -42,7 +42,7 @@
 					            
 					            <a href="#" class="btn btn-primary add-item" data-image="img/product/01.png" data-name="Almond heaven" data-cost="299.00" data-id="6" style = "margin-top: 50px ">
 					            <span class="ti-shopping-cart"></span> Ajouter au panier
-					            </a>
+					            </a><%= link_to "add cart", add_cart_item_path(@item), method: :post %>
 			        		</div>
 			 
 					        <div class="box">

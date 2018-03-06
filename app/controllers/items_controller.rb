@@ -48,6 +48,21 @@ class ItemsController < ApplicationController
 		redirect_to root_path
 	end
 
+  def add_cart
+    if user_signed_in?
+      @item = Item.find(params[:id])
+      @cart = current_user.cart 
+    
+        if @cart
+        @cart.items << @item 
+       else 
+        @cart = current_user.create_cart
+        @cart.items << @item 
+       end
+    else redirect_to new_user_session_path
+    end
+  end
+
 
 	private
 	def items_params
