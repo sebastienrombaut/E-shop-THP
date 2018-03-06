@@ -17,7 +17,7 @@
 
 							<div class="collapse navbar-collapse js-navbar-collapse">
 								<ul class="nav navbar-nav">
-									<li><%= link_to "Index", items_path, :class => "header-link"%></li>
+									<li><%= link_to "NOS PRODUITS", items_path, :class => "header-link"%></li>
 									
 									<li class="header-link"><a href="/">Bestsellers</a></li>
 	
@@ -28,7 +28,10 @@
 								<ul>
 									<% if user_signed_in? %>
 										<% if current_user.cart!= nil %>
-										  <li><%= link_to "Cart", cart_path(current_user.cart)%></li>
+										  <li><%= link_to cart_path(current_user.cart) do%>
+										  	<span class="ti-shopping-cart"> </span>MON PANIER
+										  	<%end%>
+										  </li>
 										<% end %>
 										<li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
 									<% else %>

@@ -45,15 +45,10 @@
 				<div class="col-md-3">
                     <div class="cart-right">
                         <ul class="cart-summary">
-                            <li>Total <span>$833.00</span> </li>
-                            <li>Shipping <span>Free</span> </li>
-                            <li>Total tax <span>$77.00</span> </li>
-                            <li>Total <span>$900.00</span> </li>
+
+                            <li>Total <span>$ <%= @sum %> </span> </li>
                         </ul>
-                        <div class="cart-discount">
-                            <input class="width-100 form-control" placeholder="Coupon code" type="text">
-                            <button class="width-100 btn btn-margin btn-default" type="button"><span class="ti-gift"></span>Apply</button>
-                        </div>
+ 
 
                         <a class="btn btn-margin btn-primary width-100" data-target="#order-modal" data-toggle="modal" href="#">
                             Order now <span class="ti-arrow-right"></span>

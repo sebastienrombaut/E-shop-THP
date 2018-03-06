@@ -10,5 +10,10 @@ class CartsController < ApplicationController
 
   def show
   	@cart = current_user.cart
+    @sum = 0
+    @cart.items.each do |item| 
+      @sum = @sum + item.price
+    end
+    @sum  
   end
 end
