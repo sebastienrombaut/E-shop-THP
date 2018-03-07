@@ -38,7 +38,7 @@
 			    			<div class="product-box  product-box-vertical">
 				    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
 				    				<div class="product-box-image">
-				    					<%= image_tag(item.image_url, :class=>"img-responsive", :alt=>"product image", :style => "width:100%; height:auto")%>
+				    					<%= image_tag(item.photo.url, :class=>"img-responsive", :alt=>"product image", :style => "width:100%; height:auto")%>
 				    					<span class="product-box-hover-content zoom">
 				    						<span class="product-box-hover-content-container">
 				   								<span style = "font-size:150%; padding: 15px"><%= item.description[0..150] %> ...</span>
