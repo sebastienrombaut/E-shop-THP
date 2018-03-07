@@ -14,8 +14,11 @@ Avec l'install de Paperclip, vous n'arriverez plus à acceder à l'app sans suiv
     pour Mac http://www.imagemagick.org/script/download.php
 
 - bundle install --without production
-- rails db:migrate
+- rails db:reset (c'est le mix entre db:drop, db:create et db:migrate)
 - puis créer un fichier .env à la racine et venir me demander les clés aws
+- j'ai pas réussi à faire un db:seed !
+Pour le moment :  pour créer des articles, vous pouvez allez voir dans le fichier seed puis copier coller chaque article dans la console rails :/
+
 
 
 
