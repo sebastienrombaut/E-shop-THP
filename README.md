@@ -32,3 +32,7 @@ https://stackoverflow.com/questions/6234045/how-do-you-access-devise-controllers
 
 Pour gérer tous les formats photos lors du assets:precompile
 https://stackoverflow.com/questions/8052865/rails-3-1-asset-pipeline-why-my-images-do-not-precompile-for-production
+
+Tuto Stripe : 
+https://www.youtube.com/watch?v=o5c7WFyyJFc&t=695s
+CB test : 4242 4242 4242 4242, il faut entrer une date dans le futur et mettre un crypto random
