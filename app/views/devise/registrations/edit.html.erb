@@ -1,4 +1,14 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div align=center>
+<h4>Voici vos commandes passées :</h4>
+  <% current_user.orders.each do |order| %>
+    <br>Commande n° <%= order.id%>, passée le <%= order.created_at.strftime("%d/%m/%Y")%><br>
+    <% order.items.each do |item|%>
+      <%=item.title%><br>
+    <% end %>
+  <% end %>
+
+
+<h4>Edit <%= resource_name.to_s.humanize %></h4>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -29,7 +39,7 @@
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
+  </div><br>
 
   <div class="actions">
     <%= f.submit "Update" %>
@@ -41,3 +51,4 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+</div>
