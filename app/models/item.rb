@@ -5,5 +5,13 @@ class Item < ApplicationRecord
 	validates :title, presence: true
 	validates :description, presence: true, length: { minimum: 10 }
 	validates :price, presence: true, numericality: { greater_than: 0, less_than: 1000000 }
-	validates :image_url, presence: true
+
+	has_attached_file :photo, styles: {
+    thumb: '100x100>',
+    square: '200x200#',
+    medium: '300x300>'
+  }
+
+  # Validate the attached image is image/jpg, image/png, etc
+  validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 end

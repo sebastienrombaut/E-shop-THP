@@ -10,10 +10,10 @@
 	                            </div>
 	                        </div>
 	                    </div>
-	                    <% render 'form' %>
+	                    <%= render 'form' %>
 
 	                    <div class="panel-body">
-	                    	<%= form_for(@item, method: :post, :class => "form-horizontal") do |f| %>
+	                    	<%= form_for(@item, multipart: true, method: :post, :class => "form-horizontal") do |f| %>
 	                      
 	                            <div class="form-group">
 	                                <div class="col-md-12">
@@ -23,8 +23,8 @@
 	                            </div>
 	                            <div class="form-group my-3">
 	                                <div class="col-md-12" style="margin-top: 30px">
-	                                	<%= f.label :image_url, "URL", :style=>"display:block"  %>
-	                                	 <%= f.text_field :image_url, :class => "form-control", :placeholder => "http://www.maphoto.com/cool" %>
+	                                	<%= f.label :photo, "URL", :style=>"display:block"  %>
+	                                	 <%= f.file_field :photo, :class => "form-control", :placeholder => "Parcourir ..." %>
 	                                </div>
 	                            </div>
 
