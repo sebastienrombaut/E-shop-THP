@@ -46,11 +46,28 @@
                     <div class="cart-right">
                         <ul class="cart-summary">
 
-                            <li>Total <span>$ <%= @sum %> </span> </li>
+                            <li>Total <span>$<%= @sum %> </span> </li>
                         </ul>
  
+						<div>
+							<%= form_tag orders_new_path do %>
+							  <article>
+							    <% if flash[:error].present? %>
+							      <div id="error_explanation">
+							        <p><%= flash[:error] %></p>
+							      </div>
+							    <% end %>
+							    
+							  </article>
 
-						<%=link_to "Order now", orders_new_path, :class=>"btn btn-margin btn-primary width-100"%>
+							  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+							          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+							          data-description="Votre commande :)"
+							          data-amount="<%= @sum*100 %>"
+							          data-locale="auto"></script>
+							<% end %>
+							
+						</div>
                        
                     </div>
                 </div>
