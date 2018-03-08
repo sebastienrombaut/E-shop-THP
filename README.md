@@ -2,6 +2,25 @@
 
 Notre app heroku : https://eshop-bali.herokuapp.com/
 
+Tout c'est bien passé, mis à part que l'on attend la validation de notre compte mail jet. 
+Les fonctionnalités demandées dans le trello sont là : Paperclip, Stripe ... 
+
+En features supplémentaires :
+- Nous avons géré des catégories de produits : featured, new, bestsellers
+- Il y'a un dashboard admin qui permet d'éditer les produits, de consulter les commandes et d'autres petites choses
+- On a ajouté un petit lien social dans le footer
+
+Voilà amuse toi bien :)
+
+
+
+
+
+
+
+
+
+## A partir de là, ce sont des notes pour la team (pas besoin de les lire)
 WARNING !!!!!
 PS de Leila
 Avec l'install de Paperclip, vous n'arriverez plus à acceder à l'app sans suivre ces étapes :
