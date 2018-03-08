@@ -46,7 +46,7 @@
                     <div class="cart-right">
                         <ul class="cart-summary">
 
-                            <li>Total <span>$<%= @sum %> </span> </li>
+                            <li>Total <span>€<%= @sum %> </span> </li>
                         </ul>
  
 						<div>
@@ -64,6 +64,7 @@
 							          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
 							          data-description="Votre commande :)"
 							          data-amount="<%= @sum*100 %>"
+							          data-currency="eur"
 							          data-locale="auto"></script>
 							<% end %>
 							
