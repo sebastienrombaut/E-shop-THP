@@ -47,6 +47,7 @@ class OrdersController < ApplicationController
   end
 
   def index
+  	if current_user.admin?
   	@orders = Order.all
   	@orders.each do |order|
   		order.items do |item|
@@ -56,6 +57,9 @@ class OrdersController < ApplicationController
 
     @sum = 0
     @total = 0
+    else flash[:warning] = "Page réservée aux admins"
+    redirect_to root_path
+  end
   end
 
 

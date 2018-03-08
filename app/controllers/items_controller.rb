@@ -13,7 +13,11 @@ class ItemsController < ApplicationController
   end
 
   def new
+    if current_user.admin?
   	@item = Item.new
+  else flash[:warning] = "Page réservée aux admins"
+    redirect_to root_path
+  end
   end
 
   def create
@@ -30,7 +34,11 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    if current_user.admin?
   	@item = Item.find(params[:id])
+     else flash[:warning] = "Page réservée aux admins"
+    redirect_to root_path
+  end
   end
 
   def update
