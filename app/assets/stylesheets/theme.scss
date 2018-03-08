@@ -6600,8 +6600,8 @@ body.lb-disable-scrolling {
   padding-top: 10px;
 }
 
-#about {
-  list-style-type: circle;
+ul#about > li {
+  list-style-type: square;
 }
 
 /*# sourceMappingURL=theme.css.map */
