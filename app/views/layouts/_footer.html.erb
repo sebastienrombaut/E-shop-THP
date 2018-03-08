@@ -3,7 +3,7 @@
 	            <div class="container">
 	                <div class="row">
 	                     <div class="smartphone-fw col-sm-3">
-	                     <h6 class="heading mt-0"><span>//</span> CONTACT DATA</h6>
+	                     <h6 class="heading mt-0"><span>//</span> CONTACT </h6>
 	                            <address>
 	                                <strong>Team Bali</strong><br>
 	                                Hotel Puri Sanur, Danau Buyan Street<br>
@@ -29,28 +29,17 @@
 	                    </div>
 
 	                    <div class="smartphone-fw col-xs-6 col-sm-4 col-md-2">
-	                        <h6 class="heading mt-0"><span>//</span> ACCOUNT</h6>
+	                        <h6 class="heading mt-0"><span>//</span> COMPTE</h6>
 	                        <ul>
-	                            <li><%= link_to "Edit your account", edit_user_registration_path%></li>
+	                            <li><%= link_to "Edition de ton compte", edit_user_registration_path%></li>
 	                            <li><%= link_to "Log out", destroy_user_session_path, method: :delete%>
-	                            <li><%= link_to "Cancel your account", user_registration_path, method: :delete, data: {confirm: "Really Honey?"}%>
+	                            <li><%= link_to "Supprimer ton compte", user_registration_path, method: :delete, data: {confirm: "Really Honey?"}%>
 	                            </li>
 	                        </ul>
 	                    </div>
 	     
 	                    <div class="col-xs-12 col-sm-6 col-md-3">
-	                        <h6 class="heading mt-0"><span>//</span> STAY IN TOUCH</h6>
-
-	                        <form>
-	                            <fieldset>
-									<div class="form-group">
-										<div class="footer-newsletter">
-											<input class="form-control" id="firstName" placeholder="First name" type="text">
-											<button class="btn btn-link" type="button"><span class="ti-plus"></span></button>
-										</div>
-									</div>
-								</fieldset>
-	                        </form>
+	                        <h6 class="heading mt-0"><span>//</span> GARDONS CONTACT !</h6>
 
 	                        <ul class="footer-social" data-wow-delay="0.6s">
 	                            <li><a href="https://www.facebook.com/welovecatsandkittens/" class="pull-left"><span class="ti-facebook"></span></a></li>

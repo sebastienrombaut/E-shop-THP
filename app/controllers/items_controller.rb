@@ -54,15 +54,18 @@ class ItemsController < ApplicationController
       @cart = current_user.cart 
     
         if @cart
-        @cart.items << @item 
+        @cart.items << @item
+        flash[:success] = "Le produit a bien été ajouté à votre panier !" 
         redirect_to items_path
        else 
         @cart = current_user.create_cart
         @cart.items << @item 
+        flash[:success] = "Le produit a bien été ajouté à votre panier !" 
         redirect_to items_path
        end
 
     else redirect_to new_user_session_path
+         flash[:danger] = "Vous devez vous connecter pour ajouter des produit au panier !"
     end
   end
 
