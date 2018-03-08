@@ -1,5 +1,4 @@
-
-		<section class="home">
+<section class="home">
 			<div class="home-slider home-slider-full-page">
 				<div class="swiper-wrapper">
 					<div id="backgroundimage1" class="swiper-slide home-slider-centered">
@@ -35,6 +34,7 @@
 		<% @itemsfeatured.each do |item| %>
 
 		<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
+			               <%= link_to item do %>
 			    			<div class="product-box  product-box-vertical">
 				    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
 				    				<div class="product-box-image">
@@ -45,17 +45,17 @@
 				    						</span>
 				    					</span>
 				    				</div>
+				    			<%end%>
 
 				    				<div class="product-box-details">
+				    					<span class="glyphicon glyphicon-star"></span>
 					    				
 										<h5><%= item.title %></h5>
 
 
 										
 										<span class="product-box-price h5">$ <%=item.price%></span>
-										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
-											Ajouter au panier
-										</a>
+										<%= link_to "Ajouter au panier", add_cart_item_path(item), method: :post, :class=>"btn btn-link btn-sm no-padding add-item"%>
 									</div>
 			    				</div>
 			    			</div>
@@ -67,258 +67,81 @@
 
 	              		<div role="tabpanel" class="tab-pane fade in row" id="best">
        					<!-- SINGLE PRODUCT BOX -->
-	    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
-			    			<div class="product-box  product-box-vertical">
-				    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
-				    				<div class="product-box-image">
-				    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
-				    					<span class="product-box-hover-content zoom">
-				    						<span class="product-box-hover-content-container">
+							<% @itembest.each do |item| %>
 
-				    							<span>S | M | L | XL | XXL</span>
-				    						</span>
-				    					</span>
-				    				</div>
+							<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
+								<%= link_to item do %>
+								    			<div class="product-box  product-box-vertical">
+									    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
+									    				<div class="product-box-image">
+									    					<%= image_tag(item.photo.url, :class=>"img-responsive", :alt=>"product image", :style => "width:100%; height:auto")%>
+									    					<span class="product-box-hover-content zoom">
+									    						<span class="product-box-hover-content-container">
+									   								<span style = "font-size:150%; padding: 15px"><%= item.description[0..150] %> ...</span>
+									    						</span>
+									    					</span>
+									    				</div>
+									    			<%end%>
 
-				    				<div class="product-box-details">
-					    				
-										<h5>Best1</h5>
-							            <div class="product-box-rating">
-				                            <ul>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
-				                            </ul>
-				                        </div>
+									    				<div class="product-box-details">
+									    					<span class="product-box-new">best</span>
+										    				
+															<h5><%= item.title %></h5>
 
-										
-										<span class="product-box-price h5">$ 22.33</span>
-										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
-											add to cart
-										</a>
-									</div>
-			    				</div>
-			    			</div>
+
+															
+															<span class="product-box-price h5">$ <%=item.price%></span>
+										<%= link_to "Ajouter au panier", add_cart_item_path(item), method: :post, :class=>"btn btn-link btn-sm no-padding add-item"%>
+														</div>
+								    				</div>
+								    			</div>
+								    		</div>
+
+
+							<% end %>	    	   			
 			    		</div>
-			    		<!-- / SINGLE PRODUCT BOX -->
-       					<!-- SINGLE PRODUCT BOX -->
-	    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
-			    			<div class="product-box  product-box-vertical">
-				    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
-				    				<div class="product-box-image">
-				    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
-				    					<span class="product-box-hover-content zoom">
-				    						<span class="product-box-hover-content-container">
-				   								<span class="product-box-hover-content-icons">
-					    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
-					    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
-					    							<a href="#" title="share"><span class="ti-share"></span></a>
-				    							</span>
-				    							<span>S | M | L | XL | XXL</span>
-				    						</span>
-				    					</span>
-				    				</div>
 
-				    				<div class="product-box-details">
-					    				
-										<h5>Best2</h5>
-							            <div class="product-box-rating">
-				                            <ul>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
-				                            </ul>
-				                        </div>
-
-									
-										<span class="product-box-price h5">$ 22.33</span>
-										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
-											add to cart
-										</a>
-									</div>
-			    				</div>
-			    			</div>
-			    		</div>
-			    		<!-- / SINGLE PRODUCT BOX -->
-       					<!-- SINGLE PRODUCT BOX -->
-	    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
-			    			<div class="product-box  product-box-vertical">
-				    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
-				    				<div class="product-box-image">
-				    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
-				    					<span class="product-box-hover-content zoom">
-				    						<span class="product-box-hover-content-container">
-				   								<span class="product-box-hover-content-icons">
-					    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
-					    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
-					    							<a href="#" title="share"><span class="ti-share"></span></a>
-				    							</span>
-				    							<span>S | M | L | XL | XXL</span>
-				    						</span>
-				    					</span>
-				    				</div>
-
-				    				<div class="product-box-details">
-					    				
-										<h5>Best3</h5>
-							            <div class="product-box-rating">
-				                            <ul>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star"></span></li>
-				                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
-				                            </ul>
-				                        </div>
-
-										
-										<span class="product-box-price h5">$ 22.33</span>
-										<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
-											add to cart
-										</a>
-									</div>
-			    				</div>
-			    			</div>
-			    		</div>
-			    		<!-- / SINGLE PRODUCT BOX -->
-	              		</div>
 
 	              		<div role="tabpanel" class="tab-pane fade in row" id="new">
 	      					<!-- SINGLE PRODUCT BOX -->
-		    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
-				    			<div class="product-box  product-box-vertical">
-					    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
-					    				<div class="product-box-image">
+		<% @itemsnew.each do |item| %>
 
-					    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
-
-					    					<span class="product-box-hover-content zoom">
-					    						<span class="product-box-hover-content-container">
-					   								<span class="product-box-hover-content-icons">
-						    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
-						    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
-						    							<a href="#" title="share"><span class="ti-share"></span></a>
-					    							</span>
-					    							<span>S | M | L | XL | XXL</span>
-					    						</span>
-					    					</span>
-					    				</div>
-
-					    				<div class="product-box-details">
-						    				<span class="product-box-new">new!</span>
-											<h5>New1</h5>
-								            <div class="product-box-rating">
-					                            <ul>
-					                                <li><span class="glyphicon glyphicon-star"></span></li>
-					                                <li><span class="glyphicon glyphicon-star"></span></li>
-					                                <li><span class="glyphicon glyphicon-star"></span></li>
-					                                <li><span class="glyphicon glyphicon-star"></span></li>
-					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
-					                            </ul>
-					                        </div>
-
-											
-											<span class="product-box-price h5">$ 22.33</span>
-											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
-												add to cart
-											</a>
-										</div>
+		<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
+			<%= link_to item do %>
+			    			<div class="product-box  product-box-vertical">
+				    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
+				    				<div class="product-box-image">
+				    					<%= image_tag(item.photo.url, :class=>"img-responsive", :alt=>"product image", :style => "width:100%; height:auto")%>
+				    					<span class="product-box-hover-content zoom">
+				    						<span class="product-box-hover-content-container">
+				   								<span style = "font-size:150%; padding: 15px"><%= item.description[0..150] %> ...</span>
+				    						</span>
+				    					</span>
 				    				</div>
-				    			</div>
-				    		</div>
-				    		<!-- / SINGLE PRODUCT BOX -->
-	       					<!-- SINGLE PRODUCT BOX -->
-		    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
-				    			<div class="product-box  product-box-vertical">
-					    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
-					    				<div class="product-box-image">
-					    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
-					    					<span class="product-box-hover-content zoom">
-					    						<span class="product-box-hover-content-container">
-					   								<span class="product-box-hover-content-icons">
-						    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
-						    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
-						    							<a href="#" title="share"><span class="ti-share"></span></a>
-					    							</span>
-					    							<span>S | M | L | XL | XXL</span>
-					    						</span>
-					    					</span>
-					    				</div>
+				    				<%end%>
 
-					    				<div class="product-box-details">
-						    				<span class="product-box-new">new!</span>
-											<h5>New2</h5>
-								            <div class="product-box-rating">
-					                            <ul>
-					                                <li><span class="glyphicon glyphicon-star"></span></li>
-					                                <li><span class="glyphicon glyphicon-star"></span></li>
-					                                <li><span class="glyphicon glyphicon-star"></span></li>
-					                                <li><span class="glyphicon glyphicon-star"></span></li>
-					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
-					                            </ul>
-					                        </div>
+				    				<div class="product-box-details">
+				    					<span class="product-box-new">new!</span>
+					    				
+										<h5><%= item.title %></h5>
+
 
 										
-											<span class="product-box-price h5">$ 22.33</span>
-											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
-												add to cart
-											</a>
-										</div>
-				    				</div>
-				    			</div>
-				    		</div>
-				    		<!-- / SINGLE PRODUCT BOX -->
-	       					<!-- SINGLE PRODUCT BOX -->
-		    	   			<div class="smartphone-fw col-md-4 wow fadeIn" data-wow-delay="0.2s">
-				    			<div class="product-box  product-box-vertical">
-					    			<div class="product-box-wrapper no-padding product-box-wrapper no-padding-bg">
-					    				<div class="product-box-image">
-					    					<%= image_tag("products/product-01.jpg", :class=>"img-responsive", :alt=>"product image")%>
-					    					<span class="product-box-hover-content zoom">
-					    						<span class="product-box-hover-content-container">
-					   								<span class="product-box-hover-content-icons">
-						    							<a href="#" title="wishlist"><span class="ti-heart"></span></a>
-						    							<a href="#" title="compare"><span class="ti-layout-list-thumb"></span></a>
-						    							<a href="#" title="share"><span class="ti-share"></span></a>
-					    							</span>
-					    							<span>S | M | L | XL | XXL</span>
-					    						</span>
-					    					</span>
-					    				</div>
+										<span class="product-box-price h5">$ <%=item.price%></span>
 
-					    				<div class="product-box-details">
-						    				<span class="product-box-new">new!</span>
-											<h5>New3</h5>
-								            <div class="product-box-rating">
-					                            <ul>
-					                                <li><span class="glyphicon glyphicon-star"></span></li>
-					                                <li><span class="glyphicon glyphicon-star"></span></li>
-					                                <li><span class="glyphicon glyphicon-star"></span></li>
-					                                <li><span class="glyphicon glyphicon-star"></span></li>
-					                                <li><span class="glyphicon glyphicon-star-empty unactive"></span></li>
-					                            </ul>
-					                        </div>
+										<%= link_to "Ajouter au panier", add_cart_item_path(item), method: :post, :class=>"btn btn-link btn-sm no-padding add-item"%>
+									</div>
+			    				</div>
+			    			</div>
+			    		</div>
 
-										
-											<span class="product-box-price h5">$ 22.33</span>
-											<a class="btn btn-link btn-sm no-padding add-item" data-image="assets/products/product-01.jpg" data-name="Laurent handbag" data-cost="22.33"  data-id="1">
-												add to cart
-											</a>
-										</div>
-				    				</div>
-				    			</div>
-				    		</div>
-				    		<!-- / SINGLE PRODUCT BOX -->
-	              		</div>
-	              	</div>
+
+		<% end %>
+
 				</div>
 
 
 	
 
 			</div>
-		</div>
+</div>
