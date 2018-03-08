@@ -16,17 +16,17 @@ class OrdersController < ApplicationController
 	 @order = Order.new
 	 @order.items = current_user.cart.items
 	 @order.user_id = current_user.id
-	 #debugger
+	
 	 if @order.save
 	   current_user.cart.items = []
 
-	   UserMailer.welcome_email(@user).deliver_now!
+	   #UserMailer.welcome_email(@user).deliver_now! #pas encore de compte Mailer
 
 	   @order.items.each do |item|
 	   	item.numbersales +=1
 	   end
 
-	   #redirect_to orders_new_path
+	   
 	 end
 
 	  customer = Stripe::Customer.create(
