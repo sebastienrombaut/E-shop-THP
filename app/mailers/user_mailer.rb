@@ -1,3 +1,4 @@
+=begin
 class UserMailer < ApplicationMailer
   default from: 'notifications@example.com'
  
@@ -14,3 +15,4 @@ class UserMailer < ApplicationMailer
   	mail(to: @user.email, subject: 'Ta commande a bien été enregistrée')
   end
 end
+=end
