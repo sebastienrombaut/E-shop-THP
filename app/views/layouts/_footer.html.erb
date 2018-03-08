@@ -34,7 +34,7 @@
 	                        <ul>
 	                        	
 	                        	   <%if current_user.admin?%>
-											    <li><%= link_to "Dashboard Admin", users_admin_path %></li>
+											    <li><%= link_to "Dashboard Admin", users_administrator_path %></li>
 											<%else%>
 											    <li><%= link_to "Mon profil", user_path(current_user) %></li>
 											<%end%>

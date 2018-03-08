@@ -1,13 +1,10 @@
 class UsersController < ApplicationController
 
-  def admin
-  	if current_user.admin?
-     @user = User.find(params[:id])
+  def administrator
+
      @items = Item.all
      @orders = Order.all
-    else 
-    	redirect_to root_path
-    end
+
   end
 
   def show

@@ -90,7 +90,7 @@
                     <div class="product-box-image">
                         <%= link_to item do %>
                       <div style = "height: 300px;min-width: 250px; overflow:hidden; background-color: gray; text-align: center;">
-                      <%= image_tag item.photo.url, :class => "img-responsive", :alt => "product image", :style => "min-width: 100%; min-height:100%; width:auto; height:auto; overflow:hidden;"%>
+                      <%= image_tag item.photo.url(:square), :class => "img-responsive", :alt => "product image", :style => "min-width: 100%; min-height:100%; width:auto; height:auto; overflow:hidden;"%>
                     </div>
                       <span class="product-box-hover-content zoom">
                         <span class="product-box-hover-content-container">

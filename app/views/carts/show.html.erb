@@ -12,8 +12,8 @@
 	
 
 		                <li class="row">
-		                    <span class="cart-image col-xs-6 col-sm-2">
-		                        <%= image_tag item.photo.url, :class => "img-responsive", :alt => "product image"%> 
+		                    <span class="col-xs-6 col-sm-2">
+		                        <%= image_tag item.photo.url(:thumb), :alt => "product image"%> 
 
 		                    </span>
 
@@ -21,7 +21,7 @@
 		                    	<div class="row">
 		                            <span class="cart-description col-xs-12 col-md-5">
 		                                <a class="h5" href="#"><%= item.title%></a>				   
-		                                <span class="cart-item-price h5">€ <%= item.price %></span>
+		                                <span class="cart-item-price h5">€ <%= item.price %>0</span>
 		                            </span>
 
 									<span class="col-md-2 col-sm-12">
@@ -29,7 +29,7 @@
 									</span>
 
 		                            <span class="col-md-5 col-sm-12 text-right">
-		                                <span class="cart-price pull-right">€<%= item.price %> <div class="cart-remove">
+		                                <span class="cart-price pull-right">€ <%= item.price %>0 <div class="cart-remove">
 		                               <%=link_to "", carts_remove_cart_path(item), method: :post, :class=>"ti-trash icon pull-right mt-5 ml-10"%>
 		                                </div></span>
 		                               

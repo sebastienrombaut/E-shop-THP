@@ -247,7 +247,7 @@ Item.create(
   title: "Pixie Bob",
   description: "Le pixie-bob ou pixiebob est une race de chat originaire du grand nord-ouest des États-Unis. Ce chat est caractérisé par sa ressemblance physique avec le Lynx roux (ou Bobcat en anglais).",
   price: "1300.00",
-  photo: File.open("#{Rails.root}/app/assets/images/products/pixie_bob.jpeg)",
+  photo: File.open("#{Rails.root}/app/assets/images/products/pixie_bob.jpeg"),
   featured: false,
   numbersales: 0
 )
