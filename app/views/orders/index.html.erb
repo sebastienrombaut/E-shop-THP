@@ -9,7 +9,7 @@
 						   
 							     <table style="width:70%; margin : 50px; border: 1px solid black; padding: 20px;">
 							     <tr>
-								    <th>Client : <%= link_to User.find(order.user_id).email, user_path(User.find(order.user_id)) %></th>
+								    <th>Client : <%=User.find(order.user_id).email%></th>
 								  <tr>
 								    <th></th>
 								    <th></th>								    

@@ -3720,9 +3720,13 @@ M E G A  M E N U  S C S S
     background: #fff;
     border-top: 1px solid #ecebeb; }
     .header .navbar a {
-      font-size: 12px; }
+      font-size: 16px;
+      font-weight: bold; }
       .header .navbar a:after {
         position: absolute; }
+      .header .navbar a:hover {
+        color:  #08073f;
+          }
     @media (min-width: 480px) and (max-width: 1199px) {
       .header .navbar-nav {
         padding: 30px; } }
@@ -6610,3 +6614,4 @@ ul#about > li {
 th tr {
   padding: 5px;
 }
+
