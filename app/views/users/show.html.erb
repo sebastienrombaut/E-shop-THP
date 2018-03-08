@@ -1,15 +1,14 @@
-<%if current_user.admin?%>
+
         <section id="contact" class="contact contact-with-map">
             <div class="container">
                 <div class="row">
-                	<h1>DASHBOARD ADMINISTRATEUR</h1>
+                	<h1>Mon profil</h1>
 
                 	<div class="col-md-3">
                         <div class="contact-data">
                             <ul>
                                 
                                 <li><span class="ti-email icon"></span><%=current_user.email%></li>
-                                <li><span class="ti-mobile icon"></span>Nombre de produits en ligne : <%= @items.count %></li>
                                 <li><span class="ti-mobile icon"></span>Nombre de commandes : <%= @orders.count %></li>
                                 
                             </ul>
@@ -17,33 +16,60 @@
                     </div>
 
                     <div class="col-md-12 box">
-                        <h5 class="heading mt-60 mb-0 mr-0"><span>//</span>PRODUITS</h5>
+                        <h5 class="heading mt-60 mb-0 mr-0"><span>//</span>MON COMPTE</h5>
                     </div>
 
                     <div class="col-md-8 col-md-push-1">
                         <div class="contact-form">
-                        	    <p> Pour voir, éditer, supprimer les produits :</p>
-                                <%= link_to "Voir tous les produits", items_path, :id=>"submit", :class=>"btn btn-primary btn-lg text-center float-right"%>
+                        	    
+                                <%= link_to "Changer de mot-de-passe", edit_user_password_path, :id=>"submit", :class=>"btn btn-primary btn-lg text-center float-right"%>
+                                <%= link_to "Supprimer mon compte", edit_user_password_path, :id=>"submit", :class=>"btn btn-primary btn-lg text-center float-right", :style => "backgound-color:red;"%>
                                
                             
                         </div>
                     </div>
 
                     <div class="col-md-12 box">
-                        <h5 class="heading mt-60 mb-0 mr-0"><span>//</span>COMMANDES</h5>
+                        <h5 class="heading mt-60 mb-0 mr-0"><span>//</span>MES COMMANDES</h5>
                     </div>
 
-                    <div class="col-md-8 col-md-push-1">
-                        <div class="contact-form">
-                        	    <p> Pour voir toutes les commandes :</p>
-                                <%= link_to "Voir toutes les commandes", orders_index_path, :id=>"submit", :class=>"btn btn-primary btn-lg text-center float-right"%>
-                               
-                            
-                        </div>
-                    </div>
+                    
+
+						<% @orders.each do |order|%>
+
+						   
+							     <table style="width:70%; margin : 50px; border: 1px solid black; padding: 20px;">
+							     
+								  <tr>
+								    <th>Date : <%= order.created_at %></th>
+								  </tr>
+								  <tr>
+								    <th>Produit commandé</th>
+								    <th>Prix</th>
+								    <th>Quantité</th>
+								  </tr>
+								   <% order.items.each do |item| %>
+								  <tr>
+								    <td><%= item.title %></td>
+								    <td><%= item.price %>0 $</td>
+								    <td>1</td>
+								    <% @sum = @sum + item.price %>
+								  </tr>
+								  <%end%>
+								  <tr>
+								    <th>TOTAL : <%= @sum %>0 $</th>
+								    <% @total = @sum + @total%>
+								  </tr>
+
+							</table> 
+						<%end%>
+						       
+
+
+
+
                 </div>
             </div>
 
 
         </section>
-<%end%>

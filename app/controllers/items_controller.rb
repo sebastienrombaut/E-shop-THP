@@ -35,18 +35,12 @@ class ItemsController < ApplicationController
 
   def update
   	@item = Item.find(params[:id])
-    if @item.update(item_params)
+    if @item.update(items_params)
 			redirect_to @item
 	else render 'edit'
 	end
   end
 
-
-	def destroy
-		@item = Item.find(params[:id])
-		@item.destroy
-		redirect_to root_path
-	end
 
   def add_cart
     if user_signed_in?
@@ -64,6 +58,12 @@ class ItemsController < ApplicationController
 
     else redirect_to new_user_session_path
     end
+  end
+
+  def destroy #le controller est là mais la fonction destroy n'est pas encore implémentée dans l'app
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to items_path
   end
 
 

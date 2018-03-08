@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users, :only => [:show]
+  get 'users/admin'
 
   resources :items do #route qui permet de créer un id dans l'url add_cart ce qui permet de trouver le bon item à ajouter
     post "add_cart", on: :member
