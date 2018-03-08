@@ -49,6 +49,7 @@
 								    <th>Quantité</th>
 								  </tr>
 								   <% order.items.each do |item| %>
+                                   <% @sum = 0%>
 								  <tr>
 								    <td><%= item.title %></td>
 								    <td><%= item.price %>0 $</td>
@@ -58,7 +59,7 @@
 								  <%end%>
 								  <tr>
 								    <th>TOTAL : <%= @sum %>0 $</th>
-								    <% @total = @sum + @total%>
+								   
 								  </tr>
 
 							</table> 
