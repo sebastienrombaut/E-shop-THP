@@ -6,4 +6,4 @@ class UserMailer < ApplicationMailer
     @url  = 'https://eshop-bali.herokuapp.com/'
     mail(to: @user.email, subject: 'From Bali 🌴 with Love ❤️')
   end
-end
+end 
