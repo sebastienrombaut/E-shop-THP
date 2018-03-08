@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'orders/new'
+  get 'orders/index'
   post 'orders/new' #pour faire fonctionner stripe
 
   resources :carts, only: [:index, :remove, :show] do #route qui permet de créer un id dans l'url carts/remove ce qui permet de trouver le bon item à supprimer
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
+  resources :users, :only => [:show]
 
   resources :items do #route qui permet de créer un id dans l'url add_cart ce qui permet de trouver le bon item à ajouter
     post "add_cart", on: :member

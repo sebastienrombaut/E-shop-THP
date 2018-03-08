@@ -1,0 +1,50 @@
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Index des commandes passées</h1>
+					
+
+						<% @orders.each do |order|%>
+
+						   
+							     <table style="width:70%; margin : 50px; border: 1px solid black; padding: 20px;">
+							     <tr>
+								    <th>Client : <%= link_to User.find(order.user_id).email, user_path(User.find(order.user_id)) %></th>
+								    </tr>
+								  <tr>
+								    <th>Date : <%= order.created_at %></th>
+								  </tr>
+								  <tr>
+								    <th>Produit commandé</th>
+								    <th>Prix</th>
+								    <th>Quantité</th>
+								  </tr>
+								   <% order.items.each do |item| %>
+								  <tr>
+								    <td><%= item.title %></td>
+								    <td><%= item.price %>0 $</td>
+								    <td>1</td>
+								    <% @sum = @sum + item.price %>
+								  </tr>
+								  <%end%>
+								  <tr>
+								    <th>TOTAL : <%= @sum %>0 $</th>
+								    <% @total = @sum + @total%>
+								  </tr>
+
+							</table> 
+						       
+						       
+						       
+						    
+						  
+						<%end %>
+
+						<h3>TOTAL DES COMMANDES = <%= @total %>0 $ </h3>
+
+				</div>
+			</div>
+		</div>
+
+
+

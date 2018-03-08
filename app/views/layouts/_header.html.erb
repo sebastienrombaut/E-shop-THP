@@ -27,6 +27,7 @@
 								<div class="header-languages pull-right mr-30">
 								<ul>
 									<% if user_signed_in? %>
+									    <li><%= link_to "Mon profil", user_path(current_user) %></li>
 										<% if current_user.cart!= nil %>
 										  <li><%= link_to cart_path(current_user.cart) do%>
 										  	<span class="ti-shopping-cart"> </span>MON PANIER

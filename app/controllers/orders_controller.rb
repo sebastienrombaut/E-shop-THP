@@ -39,5 +39,17 @@ class OrdersController < ApplicationController
 	  redirect_to cart_path(current_user.cart)
   end
 
+  def index
+  	@orders = Order.all
+  	@orders.each do |order|
+  		order.items do |item|
+  			sum = sum + item.price
+  		end
+  	end
+
+    @sum = 0
+    @total = 0
+  end
+
 
 end

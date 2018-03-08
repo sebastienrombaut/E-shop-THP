@@ -118,6 +118,9 @@
                     <span class="product-box-price h5"><%=item.price%> €</span>
   
                     <%= link_to "Ajouter au panier", add_cart_item_path(item), method: :post, :class=>"btn btn-link btn-sm no-padding add-item"%>
+                    <%if current_user.admin?%>
+                       <%= link_to "Editer ou supprimer cet article",  edit_item_path(item), :class=>"btn btn-link btn-sm no-padding add-item"%>
+                    <%end%>
                       
                   </div>
                   </div>
