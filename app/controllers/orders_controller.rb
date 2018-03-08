@@ -16,6 +16,7 @@ class OrdersController < ApplicationController
 	 @order = Order.new
 	 @order.items = current_user.cart.items
 	 @order.user_id = current_user.id
+	 @sum = calculate_amout
 	
 	 if @order.save
 	   current_user.cart.items = []

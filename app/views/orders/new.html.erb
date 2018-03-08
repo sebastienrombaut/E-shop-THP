@@ -4,8 +4,41 @@
                     <div class="col-md-12 box">
 
         <h2>Merci d'avoir passé une commande chez nous !</h2>
+
+<p>Vous recevrez un email de confirmation.<br> Votre numéro de commande est le : <%= @order.id %><br>Voici le récapitulatif de votre commande : </p>
+
+ <table style="width:70%; margin : 50px; border: 1px solid black; padding: 20px;">
+
+								  <tr>
+
+								    <th>Date : <%= @order.created_at %></th>
+								    <th></th>
+								    <th></th>
+								  </tr>
+								  <tr>
+								    <th>Produit commandé</th>
+								    <th>Prix</th>
+								    <th>Quantité</th>
+								  </tr>
+								   <% @order.items.each do |item| %>
+								  <tr>
+								    <td><%= item.title %></td>
+								    <td><%= item.price %>0 $</td>
+								    <td>1</td>
+								   
+								  </tr>
+								  <%end%>
+								  <tr>
+								    <th>TOTAL : <%= @sum %>0 $</th>
+								    <th></th>
+								    <th></th>
+								    
+								  </tr>
+
+							</table> 
+
+
 <p>La Team Bali vous remercie</p>
-<p>Votre commande est la suivante : <%= @order.id %> </p>
                     </div>
                 </div>
             </div>

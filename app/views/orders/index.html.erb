@@ -10,9 +10,16 @@
 							     <table style="width:70%; margin : 50px; border: 1px solid black; padding: 20px;">
 							     <tr>
 								    <th>Client : <%= link_to User.find(order.user_id).email, user_path(User.find(order.user_id)) %></th>
+								  <tr>
+								    <th></th>
+								    <th></th>								    
 								    </tr>
 								  <tr>
+
 								    <th>Date : <%= order.created_at %></th>
+								  <tr>
+								    <th></th>
+								    <th></th>								    
 								  </tr>
 								  <tr>
 								    <th>Produit commandé</th>
@@ -30,6 +37,8 @@
 								  <tr>
 								    <th>TOTAL : <%= @sum %>0 $</th>
 								    <% @total = @sum + @total%>
+								    <th></th>
+								    <th></th>
 								  </tr>
 
 							</table> 
