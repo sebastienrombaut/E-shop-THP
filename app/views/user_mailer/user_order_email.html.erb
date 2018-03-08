@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <style type="text/css" media="screen">
+      h1 { font-family: 'Lato';
+           font-size: 150%;
+           color: white;
+           background-color: #4e5664;
+           text-align: center;
+           padding: 3% }
+      #order { text-align: center;
+                 font-size: 200%;
+                 font-weight: 800;
+                 color: #4fd895; 
+                 padding-top: 3% }
+      #welcome-text { font-size: 80%;
+                      font-weight: 300 }
+      p { text-align: center ;
+         margin: 3% }
+
+      .line { border-bottom: 1px solid #dfddde;
+              margin-top: 5% }
+
+      #footer { color: #dfddde;
+                font-size: 90%;
+                margin: 1%;
+                text-align: right }
+    </style>
+  </head>
+  <body>
+    <h1>HELLO CHATON</h1>
+    <div id="order">
+      <div>
+        Ta commande a bien été enregistrée
+      </div>
+      <div id="welcome-text">
+        ... et toute l'équipe te remercie !<br>
+      </div>
+    </div>
+
+    <p>
+      Plus de petites bouilles d'amour ? 
+      <br>
+      Repasse nous voir sur la <a href="<%= @shop_url %>">boutique</a> ❤️
+    </p>
+
+    <div class="line"></div>
+
+    <p id="footer">Keep on working and come to visit Bali 🌴
+      <br>
+      and if you want to unsubscribe, well think about it twice cause it's not possible yet &nbsp
+    </p>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <style type="text/css" media="screen">
+      h1 { font-family: 'Lato';
+           font-size: 150%;
+           color: white;
+           background-color: #4e5664;
+           text-align: center;
+           padding: 3% }
+      #welcome { text-align: center;
+                 font-size: 200%;
+                 font-weight: 800;
+                 color: #4fd895; 
+                 padding-top: 3% }
+      #welcome-text { font-size: 80%;
+                      font-weight: 300 }
+      p { text-align: center ;
+         margin: 3% }
+
+      .line { border-bottom: 1px solid #dfddde;
+              margin-top: 5% }
+
+      #footer { color: #dfddde;
+                font-size: 90%;
+                margin: 1%;
+                text-align: right }
+    </style>
+  </head>
+  <body>
+    <h1>HELLO CHATON</h1>
+    <div id="welcome">
+      <div>
+        BIENVENUE
+      </div>
+      <div id="welcome-text">
+        sur l'e-shop des petits animaux<br>
+      </div>
+    </div>
+    <p>
+      Tu peux désormais te connecter avec l'identifiant suivant : 
+      <br>
+      <%= @user.email %>
+    </p>
+
+    <div class="line"></div>
+
+    <p id="footer">Keep working and come to visit Bali 🌴
+      <br>
+      and if you want to unsubscribe, well think about it twice cause it's not possible yet &nbsp
+    </p>
+  </body>
+</html>
