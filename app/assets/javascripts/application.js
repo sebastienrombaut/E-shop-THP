@@ -13,7 +13,7 @@
 //= require jquery3
 //= require bootstrap/bootstrap-tooltip
 //= require wow
-//= require swiper
+
 //= require jquery.countTo
 //= require jquery.inview
 //= require jquery.countdown

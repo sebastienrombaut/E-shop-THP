@@ -1,6 +1,10 @@
 class ItemsController < ApplicationController
-  def index
-  	@items = Item.all
+   attr_accessor :itemsfeatured
+
+ 
+
+ def featured_items
+  @items = Item.all
     @itemsfeatured  = []
 
       @items.each do |item|
@@ -8,8 +12,24 @@ class ItemsController < ApplicationController
           @itemsfeatured << item
         end
       end
-    
-        @itemsfeatured
+    @itemsfeatured
+ end
+
+
+
+  def index
+ @itemsfeatured = featured_items
+  end
+
+    def sort_atoz
+        @itemslast = Item.all.last(3)
+
+
+    respond_to do |format|
+      format.html 
+      format.js  
+    end
+
   end
 
   def new
@@ -42,11 +62,11 @@ class ItemsController < ApplicationController
   end
 
   def update
-  	@item = Item.find(params[:id])
-    if @item.update(items_params)
-			redirect_to @item
-	else render 'edit'
-	end
+  @item = Item.find(params[:id])
+        if @item.update(items_params)
+    			redirect_to @item
+    	else render 'edit'
+    	end
   end
 
 
@@ -77,6 +97,48 @@ class ItemsController < ApplicationController
     redirect_to items_path
   end
 
+ 
+
+
+
+
+
+
+  def recent
+ @itemsfeatured = featured_items
+ @items = Item.recent
+ render 'items/index'
+end
+
+def oldest
+ @itemsfeatured = featured_items
+ @items = Item.oldest
+ render 'index'
+end
+
+def best
+ @itemsfeatured = featured_items
+ @items = Item.best
+ render 'index'
+end
+
+def atoz
+ @itemsfeatured = featured_items
+ @items = Item.atoz
+ render 'index'
+end
+
+def cheap
+ @itemsfeatured = featured_items
+ @items = Item.cheap
+ render 'index'
+end
+
+def expensive
+ @itemsfeatured = featured_items
+ @items = Item.expensive
+ render 'index'
+end
 
 	private
 	def items_params

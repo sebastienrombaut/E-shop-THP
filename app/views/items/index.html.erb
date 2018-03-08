@@ -64,12 +64,17 @@
                       <span class="ti-angle-down"></span>
                       </button>
                       <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
-                          <li><a href="#">A-Z</a></li>
-                          <li><a href="#">Z-A</a></li>
-                          <li><a href="#">prix <span class="ti-arrow-up"></span></a></li>
-                          <li><a href="#">prix <span class="ti-arrow-down"></span></a></li>
-                          <li><a href="#">date <span class="ti-arrow-up"></span></a></li>
-                          <li><a href="#">date <span class="ti-arrow-down"></span></a></li>
+                         
+                         
+               
+                          <li><%= link_to best_items_path do %> bestsellers<%end%></li>
+                          <li><%= link_to atoz_items_path do %> A-Z <%end%></li>
+
+                          <li><%= link_to cheap_items_path do %> prix <span class="ti-arrow-up"></span><%end%></li>
+                          <li><%= link_to expensive_items_path do %> prix <span class="ti-arrow-down"></span><%end%></li>
+                          
+                          <li><%= link_to oldest_items_path do %> date <span class="ti-arrow-up"></span><%end%></li>
+                          <li><%= link_to recent_items_path do %> date<span class="ti-arrow-down"></span><%end%></li>
                           
                       </ul>
                   </div>
@@ -79,7 +84,7 @@
           <!-- / CATEGORY CONTROLS-->
 
           <!-- PRODUCT LISTING -->
-          <div class="row" style = "width:100vh;">
+          <div class="row" style = "width:100vh;" id ="indexitems">
                 <!-- SINGLE PRODUCT BOX -->
 
                 <% @items.each do |item| %>
