@@ -5,8 +5,8 @@ class UserMailer < ApplicationMailer
     @user = user
     @url  = 'https://eshop-bali.herokuapp.com/'
     mail(to: @user.email, subject: 'From Bali 🌴 with Love ❤️')
-  end
-end 
+
+  end 
 
   def user_order_email(user)
   	@user = user
