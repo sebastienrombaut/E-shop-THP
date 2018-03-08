@@ -24,5 +24,8 @@ class StaticPagesController < ApplicationController
 
    end
 
+   def pending
+   end
+
 
 end
