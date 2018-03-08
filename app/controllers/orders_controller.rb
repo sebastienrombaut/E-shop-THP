@@ -19,6 +19,9 @@ class OrdersController < ApplicationController
 	 #debugger
 	 if @order.save
 	   current_user.cart.items = []
+	   @order.items.each do |item|
+	   	item.numbersales +=1
+	   end
 	   #redirect_to orders_new_path
 	 end
 

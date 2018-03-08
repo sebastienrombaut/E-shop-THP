@@ -9,6 +9,13 @@ class StaticPagesController < ApplicationController
 	  	end
   	
         @itemsfeatured = @itemsfeatured.sample(3)
+
+        sales = Hash.new
+        @items.each do |item|
+        	sales[item] = item.numbersales
+        end
+        sales.sort_by { |h, i| h[i] }
+
    end
 
    def about
