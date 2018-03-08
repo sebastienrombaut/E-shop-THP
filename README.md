@@ -1,42 +1,28 @@
 # README
 
-Notre app heroku : https://eshop-bali.herokuapp.com/
+### Notre app heroku : https://eshop-bali.herokuapp.com/
 
-Tout c'est bien passé, mis à part que l'on attend la validation de notre compte mail jet. 
-Les fonctionnalités demandées dans le trello sont là : Paperclip, Stripe ... 
+Tout s'est bien passé, mis à part que l'on attend la validation de notre compte mail jet. 
+Les fonctionnalités demandées sont là : Paperclip, Stripe ... 
 
-En features supplémentaires :
-- Nous avons géré des catégories de produits : featured, new, bestsellers
+### En features supplémentaires :
+- Nous avons géré des catégories de produits : featured (l'admin peut mettre en avant les produits qu'il souhaite), new, bestsellers (articles les plus vendus)
 - Il y'a un dashboard admin qui permet d'éditer les produits, de consulter les commandes et d'autres petites choses
+- dans l'index de tous les produits, possibilités de trier les articles (A à Z, prix, date, etc.)
 - On a ajouté un petit lien social dans le footer
+
+
+###Pour tester l'app
+Test Stripe
+numéro de CB test : 4242 4242 4242 4242, il faut entrer une date dans le futur et mettre un crypto random
+
+
+Pour se connecter en tant qu'Admin :
+username : admin@admin.com
+mdp : admin2018
 
 Voilà amuse toi bien :)
 
-
-
-
-
-
-
-
-
-## A partir de là, ce sont des notes pour la team (pas besoin de les lire)
-WARNING !!!!!
-PS de Leila
-Avec l'install de Paperclip, vous n'arriverez plus à acceder à l'app sans suivre ces étapes :
-- git pull
-- installer Image Magick
-    pour Ubuntu : 
-       sudo apt-get update
-       sudo apt-get install imagemagick
-
-    pour Mac http://www.imagemagick.org/script/download.php
-
-- bundle install --without production
-- rails db:reset (c'est le mix entre db:drop, db:create et db:migrate)
-- puis créer un fichier .env à la racine et venir me demander les clés aws
-- j'ai pas réussi à faire un db:seed !
-Pour le moment :  pour créer des articles, vous pouvez allez voir dans le fichier seed puis copier coller chaque article dans la console rails :/
 
 
 
@@ -54,4 +40,11 @@ https://stackoverflow.com/questions/8052865/rails-3-1-asset-pipeline-why-my-imag
 
 Tuto Stripe : 
 https://www.youtube.com/watch?v=o5c7WFyyJFc&t=695s
-CB test : 4242 4242 4242 4242, il faut entrer une date dans le futur et mettre un crypto random
+
+
+Installer Image Magick
+    pour Ubuntu : 
+       sudo apt-get update
+       sudo apt-get install imagemagick
+
+    pour Mac http://www.imagemagick.org/script/download.php
