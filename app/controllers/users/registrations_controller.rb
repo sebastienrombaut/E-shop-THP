@@ -15,7 +15,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
       super
         if @user.save
-          UserMailer.welcome_email(@moussaillon).deliver_later
+          UserMailer.welcome_email(@moussaillon).deliver_now!
         end
     end
 
