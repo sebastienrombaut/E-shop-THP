@@ -1,0 +1,48 @@
+
+        <section id="contact" class="contact contact-with-map">
+            <div class="container">
+                <div class="row">
+                	<h1>DASHBOARD ADMINISTRATEUR</h1>
+
+                	<div class="col-md-3">
+                        <div class="contact-data">
+                            <ul>
+                                
+                                <li><span class="ti-email icon"></span><%=current_user.email%></li>
+                                <li><span class="ti-mobile icon"></span>Nombre de produits en ligne : <%= @items.count %></li>
+                                <li><span class="ti-mobile icon"></span>Nombre de commandes : <%= @orders.count %></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 box">
+                        <h5 class="heading mt-60 mb-0 mr-0"><span>//</span>PRODUITS</h5>
+                    </div>
+
+                    <div class="col-md-8 col-md-push-1">
+                        <div class="contact-form">
+                        	    <p> Pour voir, éditer, supprimer les produits :</p>
+                                <%= link_to "Voir tous les produits", items_path, :id=>"submit", :class=>"btn btn-primary btn-lg text-center float-right"%>
+                               
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 box">
+                        <h5 class="heading mt-60 mb-0 mr-0"><span>//</span>COMMANDES</h5>
+                    </div>
+
+                    <div class="col-md-8 col-md-push-1">
+                        <div class="contact-form">
+                        	    <p> Pour voir toutes les commandes :</p>
+                                <%= link_to "Voir toutes les commandes", orders_index_path, :id=>"submit", :class=>"btn btn-primary btn-lg text-center float-right"%>
+                               
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>

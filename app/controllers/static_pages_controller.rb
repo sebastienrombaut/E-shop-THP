@@ -9,6 +9,11 @@ class StaticPagesController < ApplicationController
 	  	end
   	
         @itemsfeatured = @itemsfeatured.sample(3)
-  	end
+   end
+
+   def about
+
+   end
+
 
 end

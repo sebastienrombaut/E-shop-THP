@@ -6,10 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
+#ADMIN USER
+ User.create(email: "admin@admin.com", password: "admin2018", password_confirmation: "admin2018", admin:true)
+
+#ITEMS
+
+
 Item.create(title: "British Shorthair", description: "Le british shorthair est une race de chat originaire de Grande-Bretagne. Ce chat de taille moyenne à grande est caractérisé par sa tête très ronde et ses grands yeux ronds.", price: "953.00",
   photo: File.open("#{Rails.root}/app/assets/images/products/product-01.jpg"), featured: true, numbersales: 0 )
-
-
 
 
 Item.create(
@@ -37,7 +43,7 @@ Item.create(
   photo: File.open("#{Rails.root}/app/assets/images/products/ragdoll.jpeg"),
   featured: true,
   numbersales: 0
-);
+)
 
 Item.create(
   title: "Bengal",

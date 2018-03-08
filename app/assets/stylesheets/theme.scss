@@ -6600,7 +6600,13 @@ body.lb-disable-scrolling {
   padding-top: 10px;
 }
 
+ul#about > li {
+  list-style-type: square;
+}
+
 /*# sourceMappingURL=theme.css.map */
 
 
-
+th tr {
+  padding: 5px;
+}

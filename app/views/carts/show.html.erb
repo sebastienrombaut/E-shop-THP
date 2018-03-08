@@ -3,9 +3,9 @@
 				<div class="col-md-9">
 					<ul class="cart-items width-100 pull-left pl-30 pr-30 pb-30 pt-30 border">
 		                <li class="cart-items-labels visible-lg-block visible-md-block row"> 
-		                    <span class="col-md-6">product</span>
-		                    <span class="col-md-2 text-center">quantity</span> 
-		                    <span class="col-md-4 text-right">price</span>
+		                    <span class="col-md-6">Produit(s)</span>
+		                    <span class="col-md-2 text-center">Quantité</span> 
+		                    <span class="col-md-4 text-right">Prix</span>
 		                </li>
 
 		                <% @cart.items.each do |item| %>
@@ -21,7 +21,7 @@
 		                    	<div class="row">
 		                            <span class="cart-description col-xs-12 col-md-5">
 		                                <a class="h5" href="#"><%= item.title%></a>				   
-		                                <span class="cart-item-price h5">$ <%= item.price %></span>
+		                                <span class="cart-item-price h5">€ <%= item.price %></span>
 		                            </span>
 
 									<span class="col-md-2 col-sm-12">
@@ -29,7 +29,7 @@
 									</span>
 
 		                            <span class="col-md-5 col-sm-12 text-right">
-		                                <span class="cart-price pull-right">$<%= item.price %> <div class="cart-remove">
+		                                <span class="cart-price pull-right">€<%= item.price %> <div class="cart-remove">
 		                               <%=link_to "", carts_remove_cart_path(item), method: :post, :class=>"ti-trash icon pull-right mt-5 ml-10"%>
 		                                </div></span>
 		                               
@@ -46,7 +46,7 @@
                     <div class="cart-right">
                         <ul class="cart-summary">
 
-                            <li>Total <span>$<%= @sum %> </span> </li>
+                            <li>Total <span>€<%= @sum %> </span> </li>
                         </ul>
  
 						<div>
@@ -64,6 +64,7 @@
 							          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
 							          data-description="Votre commande :)"
 							          data-amount="<%= @sum*100 %>"
+							          data-currency="eur"
 							          data-locale="auto"></script>
 							<% end %>
 							
