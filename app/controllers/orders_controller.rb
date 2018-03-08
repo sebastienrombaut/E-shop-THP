@@ -20,6 +20,7 @@ class OrdersController < ApplicationController
 	 if @order.save
 	   current_user.cart.items = []
 	   #redirect_to orders_new_path
+	   UserMailer.welcome_email(@user).deliver_now!
 	 end
 
 	  customer = Stripe::Customer.create(
