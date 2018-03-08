@@ -30,9 +30,21 @@ Rails.application.routes.draw do
 
 
 #Modele ITEMS
+get 'items/sort_atoz'
+
   resources :items do #route qui permet de créer un id dans l'url add_cart ce qui permet de trouver le bon item à ajouter
     post "add_cart", on: :member
+    collection do
+      get :recent
+      get :oldest
+      get :best
+      get :atoz
+      get :cheap
+      get :expensive
+    end
   end
+
+  
 
   
 
