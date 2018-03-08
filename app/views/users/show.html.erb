@@ -31,25 +31,28 @@
 
                     <div class="col-md-12 box">
                         <h5 class="heading mt-60 mb-0 mr-0"><span>//</span>MES COMMANDES</h5>
-                    </div>
+                    
 
                     
 
 						<% @orders.each do |order|%>
 
 						   
-							     <table style="width:70%; margin : 50px; border: 1px solid black; padding: 20px;">
+							     <table style="width:70%; margin : 50px; border: 1px solid black; padding: 25px;"">
 							     
 								  <tr>
 								    <th>Date : <%= order.created_at %></th>
+                                    <th></th>
+                                    <th></th>
 								  </tr>
 								  <tr>
 								    <th>Produit commandé</th>
 								    <th>Prix</th>
 								    <th>Quantité</th>
 								  </tr>
+                                  <% @sum = 0%>
 								   <% order.items.each do |item| %>
-                                   <% @sum = 0%>
+                                   
 								  <tr>
 								    <td><%= item.title %></td>
 								    <td><%= item.price %>0 $</td>
@@ -59,6 +62,8 @@
 								  <%end%>
 								  <tr>
 								    <th>TOTAL : <%= @sum %>0 $</th>
+                                    <th></th>
+                                    <th></th>
 								   
 								  </tr>
 
@@ -66,7 +71,7 @@
 						<%end%>
 						       
 
-
+                    </div>
 
 
                 </div>
