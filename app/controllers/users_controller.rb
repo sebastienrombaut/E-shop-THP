@@ -23,6 +23,7 @@ class UsersController < ApplicationController
   	end
 
     @sum = 0
+    @total = 0
     
 
   end
