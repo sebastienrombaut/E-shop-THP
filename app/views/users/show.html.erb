@@ -32,43 +32,43 @@
                         <h5 class="heading mt-60 mb-0 mr-0"><span>//</span>MES COMMANDES</h5>
                     
 
-                    
+                        <div align="center">
 
-						<% @orders.each do |order|%>
+    						<% @orders.each do |order|%>
 
-						   
-							     <table style="width:70%; margin : 50px; border: 1px solid black; padding: 25px;"">
-							     
-								  <tr>
-								    <th>Date : <%= order.created_at %></th>
-                                    <th></th>
-                                    <th></th>
-								  </tr>
-								  <tr>
-								    <th>Produit commandé</th>
-								    <th>Prix</th>
-								    <th>Quantité</th>
-								  </tr>
-                                  <% @sum = 0%>
-								   <% order.items.each do |item| %>
-                                   
-								  <tr>
-								    <td><%= item.title %></td>
-								    <td><%= item.price %>0 $</td>
-								    <td>1</td>
-								    <% @sum = @sum + item.price %>
-								  </tr>
-								  <%end%>
-								  <tr>
-								    <th>TOTAL : <%= @sum %>0 $</th>
-                                    <th></th>
-                                    <th></th>
-								   
-								  </tr>
+    						   
+    							     <table style="width:70%; margin : 50px; border: 1px solid black; padding: 25px;"">
+    							     
+    								  <tr>
+    								    <th>Date : <%= order.created_at %></th>
+                                        <th></th>
+                                        <th></th>
+    								  </tr>
+    								  <tr>
+    								    <th>Produit commandé</th>
+    								    <th>Prix</th>
+    								    <th>Quantité</th>
+    								  </tr>
+                                      <% @sum = 0%>
+    								   <% order.items.each do |item| %>
+                                       
+    								  <tr>
+    								    <td><%= item.title %></td>
+    								    <td><%= item.price %>0 $</td>
+    								    <td>1</td>
+    								    <% @sum = @sum + item.price %>
+    								  </tr>
+    								  <%end%>
+    								  <tr>
+    								    <th>TOTAL : <%= @sum %>0 $</th>
+                                        <th></th>
+                                        <th></th>
+    								   
+    								  </tr>
 
-							</table> 
-						<%end%>
-						       
+    							</table> 
+    						<%end%>
+						</div>       
 
                     </div>
 
