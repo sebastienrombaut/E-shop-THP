@@ -2,7 +2,7 @@
 
 ### Notre app heroku : https://eshop-bali.herokuapp.com/
 
-Tout s'est bien passé, mis à part que l'on attend la validation de notre compte mail jet. 
+Tout s'est bien passé, mis à part que l'on attend la validation de notre compte mail jet, le code a été fait. 
 Les fonctionnalités demandées sont là : Paperclip, Stripe ... 
 
 ### En features supplémentaires :
