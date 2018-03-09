@@ -1,4 +1,4 @@
-		<div class="container">
+		<div class="container" align="center">
 			<div class="row">
 				<div class="col-md-12">
 					<h1>Index des commandes passées</h1>
@@ -10,22 +10,25 @@
 							     <table style="width:70%; margin : 50px; border: 1px solid black; padding: 20px;">
 							     <tr>
 								    <th>Client : <%=User.find(order.user_id).email%></th>
-								  <tr>
 								    <th></th>
-								    <th></th>								    
-								    </tr>
+								    <th></th>
+								  </tr>
+								    								    
+								    
 								  <tr>
 
 								    <th>Date : <%= order.created_at %></th>
-								  <tr>
 								    <th></th>
-								    <th></th>								    
+								    <th></th>
 								  </tr>
+								   								    
+								 
 								  <tr>
 								    <th>Produit commandé</th>
 								    <th>Prix</th>
 								    <th>Quantité</th>
 								  </tr>
+								   <% @sum = 0 %>
 								   <% order.items.each do |item| %>
 								  <tr>
 								    <td><%= item.title %></td>
