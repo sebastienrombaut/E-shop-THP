@@ -19,15 +19,16 @@
                                 <li>
                                     <a aria-expanded="true" class="active" href="javascript:;" data-toggle="collapse" data-target="#men-watches">Photos de chats<i class="ti-minus"></i>  <i class="ti-plus"></i></a>
                                     <ul style="" aria-expanded="true" id="men-watches" class="collapseItem collapse in">
-                                        <li><a href="#"><i class="ti-arrow-right" aria-hidden="true"></i>Photos Stars <span>(<%=@itemsfeatured.count%>)</span></a></li>
-                                        <li><a href="#"><i class="ti-arrow-right" aria-hidden="true"></i>Bestsellers <span>(xx)</span></a></li>
-                                        <li><a href="#"><i class="ti-arrow-right" aria-hidden="true"></i>Nouveautés <span>(xx)</span></a></li>
+
+                                        <li><%= link_to featured_items_path do %><i class="ti-arrow-right" aria-hidden="true"></i>Photos Stars <span>(<%=@itemsfeatured.count%>)</span><%end%></li>
+                                        <li><%= link_to best_ten_items_path do %><i class="ti-arrow-right" aria-hidden="true"></i>Bestsellers <span>(10)</span><%end%></li>
+                                        <li><%= link_to recent_five_items_path do %><i class="ti-arrow-right" aria-hidden="true"></i>Nouveautés <span>(5)</span><%end%></li>
 
                                     </ul>
                                 </li>
 
                                 <li>
-                                    <a aria-expanded="true" class="collapsed" href="javascript:;" data-toggle="collapse" data-target="#woman-watches">Si on rajoute des catégories?<i class="ti-minus"></i>  <i class="ti-plus"></i></a>
+                                    <a aria-expanded="true" class="collapsed" href="javascript:;" data-toggle="collapse" data-target="#woman-watches">Chat-rades<i class="ti-minus"></i>  <i class="ti-plus"></i></a>
                                     <ul style="" aria-expanded="true" id="woman-watches" class="collapseItem collapse">
                                         <li><%= link_to static_pages_pending_path do %><i class="ti-arrow-right" aria-hidden="true"></i>Chat-eau <span>(5)</span><% end %></li>
                                         <li><%= link_to static_pages_pending_path do %><i class="ti-arrow-right" aria-hidden="true"></i>Chat perché <span>(4)</span><% end %></li>
@@ -36,7 +37,7 @@
                                 </li>
 
                                 <li>
-                                    <a aria-expanded="true" class="collapsed" href="javascript:;" data-toggle="collapse" data-target="#kids-watches">Photos de chiens ? De lapins ?<i class="ti-minus"></i>  <i class="ti-plus"></i></a>
+                                    <a aria-expanded="true" class="collapsed" href="javascript:;" data-toggle="collapse" data-target="#kids-watches">Autres animaux<i class="ti-minus"></i>  <i class="ti-plus"></i></a>
                                     <ul style="" aria-expanded="true" id="kids-watches" class="collapseItem collapse">
                                         <li><%= link_to static_pages_pending_path do %><i class="ti-arrow-right" aria-hidden="true"></i>Chiens <span>(2)</span><% end %></li>
                                         <li><%= link_to static_pages_pending_path do %><i class="ti-arrow-right" aria-hidden="true"></i>Lapins <span>(9)</span><% end %></li>
@@ -102,8 +103,10 @@
                             <span class="product-box-hover-content-icons">
                             <p title="wishlist">
                                 <span class="glyphicon glyphicon-star"></span>Photo star</p>                   
-                   
+                              <% else %>
+                               <span style = "font-size:150%; padding: 15px"><%= item.description[0..150] %> ...</span>
                               <% end %>
+
                            
                           </span>
                         </span>
@@ -118,7 +121,7 @@
                          
 
                     
-                    <span class="product-box-price h5"><%=item.price%> €</span>
+                    <span class="product-box-price h5"><%=item.price%>0 €</span>
   
                     <%= link_to "Ajouter au panier", add_cart_item_path(item), method: :post, :class=>"btn btn-link btn-sm no-padding add-item"%>
                     <%if user_signed_in? && current_user.admin?%>

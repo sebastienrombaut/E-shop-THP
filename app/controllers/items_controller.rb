@@ -100,13 +100,23 @@ class ItemsController < ApplicationController
  
 
 
+def featured
+ @itemsfeatured = featured_items
+ @items = featured_items
+ render 'items/index'
+end
 
 
 
-
-  def recent
+def recent
  @itemsfeatured = featured_items
  @items = Item.recent
+ render 'items/index'
+end
+
+def recent_five
+ @itemsfeatured = featured_items
+ @items = Item.recent.first(5)
  render 'items/index'
 end
 
@@ -119,6 +129,12 @@ end
 def best
  @itemsfeatured = featured_items
  @items = Item.best
+ render 'index'
+end
+
+def best_ten
+ @itemsfeatured = featured_items
+ @items = Item.best.first(10)
  render 'index'
 end
 

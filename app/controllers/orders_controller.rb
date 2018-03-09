@@ -24,7 +24,8 @@ class OrdersController < ApplicationController
 	   #UserMailer.welcome_email(@user).deliver_now! #pas encore de compte Mailer
 
 	   @order.items.each do |item|
-	   	item.numbersales +=1
+	   	item.numbersales += 1
+	   	item.save
 	   end
 
 	   

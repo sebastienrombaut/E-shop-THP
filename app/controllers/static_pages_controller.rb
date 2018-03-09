@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
         @itemsfeatured = @itemsfeatured.sample(3)
         
 
-        @itembest = @items.order("numbersales")[0..2]
+        @itembest = @items.order(numbersales: :desc)[0..2]
         
         @itemsnew = @items.order("created_at").last(3)
        

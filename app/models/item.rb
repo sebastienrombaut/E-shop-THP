@@ -19,7 +19,7 @@ class Item < ApplicationRecord
 
   scope :recent, -> { order("created_at") }
   scope :oldest, -> { order(created_at: :desc) }
-  scope :best, -> { order("numbersales") }
+  scope :best, -> { order(numbersales: :desc) }
   scope :atoz, -> { order("title") }
   scope :cheap, -> { order("price") }
   scope :expensive, -> { order(price: :desc) }

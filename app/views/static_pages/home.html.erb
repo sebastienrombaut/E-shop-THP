@@ -21,7 +21,7 @@
    				<!-- TAB PANEL ROW -->
    				<div class="col-md-12 box mt-60">
 					<ul class="nav nav-tabs nav-center mb-30" role="tablist">
-						<li class="active wow fadeInRight" data-wow-delay="0.6s"><a href="#featured" data-toggle="tab">featured</a></li>
+						<li class="active wow fadeInRight" data-wow-delay="0.6s"><a href="#featured" data-toggle="tab">photos stars</a></li>
 						<li class=" wow fadeInRight" data-wow-delay="0.4s"><a href="#best" data-toggle="tab">bestsellers</a></li>
 						<li class=" wow fadeInRight" data-wow-delay="0.2s" ><a href="#new" data-toggle="tab">new</a></li>
 					</ul>
@@ -52,7 +52,7 @@
 
 
 										
-										<span class="product-box-price h5">$ <%=item.price%></span>
+										<span class="product-box-price h5"><%=item.price%> 0 €</span>
 										<%= link_to "Ajouter au panier", add_cart_item_path(item), method: :post, :class=>"btn btn-link btn-sm no-padding add-item"%>
 									</div>
 			    				</div>
@@ -88,7 +88,7 @@
 
 
 															
-															<span class="product-box-price h5">$ <%=item.price%></span>
+															<span class="product-box-price h5"><%=item.price%> 0 €</span>
 										<%= link_to "Ajouter au panier", add_cart_item_path(item), method: :post, :class=>"btn btn-link btn-sm no-padding add-item"%>
 														</div>
 								    				</div>
@@ -125,7 +125,7 @@
 
 
 										
-										<span class="product-box-price h5">$ <%=item.price%></span>
+										<span class="product-box-price h5"><%=item.price%> €</span>
 
 										<%= link_to "Ajouter au panier", add_cart_item_path(item), method: :post, :class=>"btn btn-link btn-sm no-padding add-item"%>
 									</div>

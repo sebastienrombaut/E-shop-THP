@@ -6,9 +6,9 @@ Tout s'est bien passé, mis à part que l'on attend la validation de notre compt
 Les fonctionnalités demandées sont là : Paperclip, Stripe ... 
 
 ### En features supplémentaires :
-- Nous avons géré des catégories de produits : featured (l'admin peut mettre en avant les produits qu'il souhaite), new, bestsellers (articles les plus vendus)
+- Nous avons géré des catégories de produits :Photos stars (l'admin peut mettre en avant les produits qu'il souhaite (produits feautured)), new, bestsellers (articles les plus vendus)
 - Il y'a un dashboard admin qui permet d'éditer les produits, de consulter les commandes et d'autres petites choses
-- dans l'index de tous les produits, possibilités de trier les articles (A à Z, prix, date, etc.)
+- dans l'index de tous les produits, possibilités de trier les articles (A à Z, prix, date, etc.) !! Ca n'a l'air de rien, mais pour nous ça veut dire beaucoup ! Alors amuse toi à trier :)
 - On a ajouté un petit lien social dans le footer
 
 
